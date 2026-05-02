@@ -120,23 +120,23 @@ export default function TestimonialsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {clientCompanies.map((company, index) => (
               <ScrollReveal key={company.name} direction="up" delay={index * 150}>
-                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border-2 border-gray-100 hover:border-red-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-lg p-6 border-2 border-gray-200 hover:border-red-300 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full flex flex-col items-center text-center">
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-t-2xl" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-t-lg" />
 
                   {/* Company Icon */}
-                  <div className="relative mb-6 h-28 w-28 md:h-32 md:w-32 overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="relative mb-6 h-24 w-24 overflow-hidden rounded-lg bg-white border border-gray-200 shadow-sm group-hover:scale-110 transition-transform duration-300">
                     <Image
                       src={company.logo}
                       alt={`${company.name} logo`}
                       fill
-                      sizes="(min-width: 768px) 128px, 112px"
-                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 96px, 96px"
+                      className="object-contain p-2"
                     />
                   </div>
 
                   {/* Company Name */}
-                  <h3 className="text-2xl font-bold mb-2 leading-snug" style={{ color: '#E63946' }}>
+                  <h3 className="text-xl font-bold mb-2 leading-snug" style={{ color: '#E63946' }}>
                     {company.name}
                   </h3>
                 </div>

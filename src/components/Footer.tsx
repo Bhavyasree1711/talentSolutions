@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, MapPin, Phone, Mail } from 'lucide-react';
 import DMXLogo from './DMXLogo';
 
 export default function Footer() {
@@ -83,32 +83,52 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-sm uppercase mb-5">Contact Us</h3>
 
-            <p className="text-sm text-gray-400 mb-3">
-              #10, BTM 2nd Stage, Bangalore
-            </p>
+            <div className="flex items-start gap-3 mb-4">
+              <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm text-gray-400 mb-1">
+                  #10, BTM 2nd Stage, Bangalore 68
+                </p>
+                <p className="text-sm text-gray-400">
+                  No. 3, Service Road, 17th Main Rd, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068 3rd Floor
+                </p>
+              </div>
+            </div>
 
-            <p className="text-sm text-gray-400 mb-2">
-              <a href="tel:+916364512292" className="hover:text-red-400">
-                +91 6364512292
-              </a>
-            </p>
+            <div className="flex items-start gap-3 mb-4">
+              <Phone className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm text-gray-400 mb-1">
+                  <a href="tel:+919247090111" className="hover:text-red-400">+91 9247090111</a>
+                </p>
+                <p className="text-sm text-gray-400 mb-1">
+                  <a href="tel:+916364512292" className="hover:text-red-400">+91 6364512292</a>
+                </p>
+              </div>
+            </div>
 
-            <p className="text-sm text-gray-400 mb-4">
-              <a href="mailto:info@dmxtechservices.com" className="hover:text-red-400">
-                info@dmxtechservices.com
-              </a>
-            </p>
+            <div className="flex items-center gap-3 mb-6">
+              <Mail className="w-5 h-5 text-red-500 flex-shrink-0" />
+              <p className="text-sm text-gray-400">
+                <a href="mailto:info@dmxtechservices.com" className="hover:text-red-400">
+                  info@dmxtechservices.com
+                </a>
+              </p>
+            </div>
 
             {/* Newsletter */}
-            <form className="flex" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l text-sm text-white"
-              />
-              <button className="px-4 bg-red-700 hover:bg-red-600 text-white rounded-r">
-                →
-              </button>
+            <form className="flex flex-col gap-3 mt-4" onSubmit={(e) => e.preventDefault()}>
+              <p className="text-sm text-gray-400">Subscribe to our newsletter</p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="flex-1 px-4 py-2 w-full bg-gray-800 border border-gray-700 rounded-l text-sm text-white focus:outline-none focus:border-red-500"
+                />
+                <button className="px-4 bg-red-700 hover:bg-red-600 text-white rounded-r transition-colors">
+                  →
+                </button>
+              </div>
             </form>
           </div>
 

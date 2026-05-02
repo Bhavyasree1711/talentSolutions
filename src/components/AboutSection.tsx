@@ -14,10 +14,6 @@ export default function AboutSection() {
                 <Image src="/images/service-talent-sourcing.png" alt="DMX Talent Solutions team collaboration" width={600} height={500} className="w-full h-auto object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 lg:-right-8 bg-white rounded-2xl shadow-xl p-6 animate-float-slow">
-                <div className="text-center">
-                  <p className="text-4xl font-extrabold text-red-700">10+</p>
-                  <p className="text-sm font-semibold text-gray-600 mt-1">Years of<br />Experience</p>
-                </div>
               </div>
               <div className="absolute -top-4 -left-4 w-20 h-20 opacity-20">
                 <div className="grid grid-cols-4 gap-1.5">
@@ -92,11 +88,12 @@ export default function AboutSection() {
                   src="/images/image.png"
                   alt="Siddeswara S"
                   fill
+                sizes="(max-width: 768px) 100vw, 160px"
                   className="object-cover rounded-full"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-800">SIDDESWARA S</h3>
-              <p className="text-sm text-red-700 font-semibold">CO-FOUNDER & CTO</p>
+              <p className="text-sm text-red-700 font-semibold">FOUNDER & DIRECTOR</p>
             
                 
                 
@@ -110,6 +107,7 @@ export default function AboutSection() {
                   src="/images/foun.png"
                   alt="B S Mahalakshmi"
                   fill
+                sizes="(max-width: 768px) 100vw, 160px"
                   className="object-cover rounded-full"
                 />
               </div>

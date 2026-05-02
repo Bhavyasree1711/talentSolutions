@@ -87,82 +87,92 @@ export default function TrainingServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trainingSteps.map((step, index) => (
             <ScrollReveal key={step.number} direction="up" delay={index * 150}>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-100 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur" />
-                <div className="relative bg-white rounded-2xl p-8 border-2 border-gray-100 group-hover:border-red-300 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 h-full flex flex-col">
-                  <div className="mb-6 flex items-center justify-between gap-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-50 to-blue-50 text-red-700 shadow-sm ring-1 ring-red-100 transition-transform duration-300 group-hover:scale-110">
-                      <TrainingStepIcon icon={step.icon} />
-                    </div>
-                    <span className="rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-extrabold tracking-wider text-red-700">
-                      STEP {String(step.number).padStart(2, '0')}
-                    </span>
+              <div className="relative group bg-white rounded-lg p-6 border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-between">
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-gradient-to-br from-red-50 to-blue-50 text-red-700 shadow-sm ring-1 ring-red-100 transition-transform duration-300 group-hover:scale-110">
+                    <TrainingStepIcon icon={step.icon} />
                   </div>
-
-                  <h3 className="text-2xl font-bold mb-3 leading-snug" style={{ color: '#0B1F3A' }}>
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed flex-1">{step.description}</p>
-
-                  {/* Arrow indicator */}
-                  {index < trainingSteps.length - 1 && (
-                    <div className="mt-6 text-red-700 font-bold text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
-                      ↓
-                    </div>
-                  )}
+                  <span className="rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-extrabold tracking-wider text-red-700">
+                    STEP {String(step.number).padStart(2, '0')}
+                  </span>
                 </div>
+
+                <h3 className="text-xl font-bold mb-3 leading-snug" style={{ color: '#0B1F3A' }}>
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-1">{step.description}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
+        
 
-        {/* Feature highlights */}
-        {/* FEATURE HEADING */}
-<div className="mt-20 text-center mb-10">
-  <h3 className="text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#0B1F3A' }}>
-    Our Training Program Includes
-  </h3>
-  <p className="text-gray-600 max-w-xl mx-auto">
-    We ensure every learner gets practical exposure, expert guidance, and real industry opportunities.
-  </p>
-</div>
+        <section className="py-20">
 
-{/* FEATURE CARDS */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              icon: GraduationCap,
-              title: 'Experienced Faculty',
-              desc: 'Learn from industry experts with 15+ years of experience'
-            },
-            {
-              icon: BriefcaseBusiness,
-              title: 'Real-World Training',
-              desc: 'Hands-on learning with live projects and case studies'
-            },
-            {
-              icon: Handshake,
-              title: 'Industry Connections',
-              desc: 'Network and get direct placement opportunities'
-            },
-          ].map((feature, i) => (
-            <ScrollReveal key={i} direction="up" delay={i * 100}>
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-red-200 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-1">
-                <div className="mb-5 flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-50 to-blue-50 text-red-700 shadow-sm ring-1 ring-red-100 transition-transform duration-300 group-hover:scale-110">
-                    <feature.icon className="h-8 w-8" strokeWidth={2} />
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold mb-2" style={{ color: '#0B1F3A' }}>
-                  {feature.title}
-                </h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* HEADING */}
+    <div className="text-center mb-14">
+      <h3 className="text-3xl sm:text-4xl font-bold text-[#0B1F3A] mb-3">
+        Why Choose Our Training Program?
+      </h3>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        We combine expert mentorship, hands-on learning, and strong industry connections to help you succeed.
+      </p>
+    </div>
+
+    {/* GRID */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        {
+          icon: GraduationCap,
+          title: 'Experienced Faculty',
+          desc: 'Learn from industry experts with 15+ years of experience',
+        },
+        {
+          icon: BriefcaseBusiness,
+          title: 'Real-World Training',
+          desc: 'Hands-on learning with live projects and case studies',
+        },
+        {
+          icon: Handshake,
+          title: 'Industry Connections',
+          desc: 'Network and get direct placement opportunities',
+        },
+      ].map((feature, i) => (
+        <ScrollReveal key={i} direction="up" delay={i * 100}>
+
+          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 text-center group h-full flex flex-col">
+
+            {/* ICON */}
+            <div className="mb-5 flex justify-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-gradient-to-br from-red-50 to-blue-50 text-red-700 shadow-sm ring-1 ring-red-100 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="h-8 w-8" strokeWidth={2} />
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+            </div>
+
+            {/* TITLE */}
+            <h4 className="text-xl font-bold mb-2 text-[#0B1F3A]">
+              {feature.title}
+            </h4>
+
+            {/* DESC */}
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {feature.desc}
+            </p>
+
+          </div>
+
+        </ScrollReveal>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
       </div>
     </section>
   );
-}
+} 

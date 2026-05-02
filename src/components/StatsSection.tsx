@@ -55,7 +55,7 @@ export default function StatsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <ScrollReveal key={stat.label} direction="up" delay={index * 150}>
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border-2 border-gray-100 hover:border-red-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 text-center group h-full flex flex-col justify-between">
                 <p className="text-5xl sm:text-6xl font-extrabold mb-3 transition-colors" style={{ color: '#E63946' }}>
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </p>

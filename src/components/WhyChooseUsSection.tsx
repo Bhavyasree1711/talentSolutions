@@ -61,20 +61,21 @@ export default function WhyChooseUsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {reasons.map((reason, index) => (
             <ScrollReveal key={index} direction="up" delay={index * 120}>
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
 
                 {/* IMAGE */}
-                <div className="relative w-full h-56 overflow-hidden">
+                <div className="relative w-full h-48 overflow-hidden">
                   <Image
                     src={reason.image}
                     alt={reason.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
                 {/* TEXT */}
-                <div className="p-6 text-center">
+                <div className="p-5 text-center flex-1 flex flex-col justify-between">
                   <h3
                     className="text-lg font-bold mb-2 group-hover:text-red-700 transition-colors"
                     style={{ color: '#1e3a5f' }}
@@ -85,7 +86,6 @@ export default function WhyChooseUsSection() {
                     {reason.description}
                   </p>
                 </div>
-
               </div>
             </ScrollReveal>
           ))}

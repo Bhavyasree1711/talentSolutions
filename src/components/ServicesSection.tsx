@@ -3,23 +3,6 @@
 import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 
-const stats = [
-  {
-    value: '94%',
-    label: 'Retention Rate',
-    description: 'Our placed candidates remain with clients past the one-year mark',
-  },
-  {
-    value: '48hrs',
-    label: 'Average Response Time',
-    description: 'From initial request to qualified candidate presentation',
-  },
-  {
-    value: '85%',
-    label: 'Technical Match Rate',
-    description: 'Candidates who meet or exceed technical requirements on first submission',
-  },
-];
 
 const services = [
   {
@@ -78,24 +61,8 @@ export default function ServicesSection() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <ScrollReveal key={index} direction="up" delay={index * 100}>
-              <div className="text-center">
-                <div
-                  className="text-5xl sm:text-6xl font-extrabold mb-2"
-                  style={{ color: '#0B1F3A' }}
-                >
-                  {stat.value}
-                </div>
-                <h3 className="text-lg font-bold mb-3" style={{ color: '#0B1F3A' }}>
-                  {stat.label}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {stat.description}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
+          
+            
         </div>
 
         {/* Services Grid */}
@@ -116,6 +83,7 @@ export default function ServicesSection() {
                     src={service.image}
                     alt={service.title}
                     fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>

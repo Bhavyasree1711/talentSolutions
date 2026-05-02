@@ -48,7 +48,6 @@ export default function RecruitmentMethodologiesSection() {
                     alt={method.title}
                     fill
                     sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
-                    quality={100}
                     className="object-cover object-center"
                   />
                 </div>

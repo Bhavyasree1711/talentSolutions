@@ -26,6 +26,7 @@ export default function DMXLogo({
         width={width}
         height={60}
         className="object-contain"
+        style={{ width: 'auto', height: 'auto' }}
         priority
       />
     </div>

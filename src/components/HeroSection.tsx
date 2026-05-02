@@ -1,5 +1,7 @@
 'use client';
 
+import SocialSidebar from './SocialSidebar';
+
 export default function HeroSection() {
   return (
     <section
@@ -26,6 +28,9 @@ export default function HeroSection() {
           backgroundRepeat: 'no-repeat',
         }}
       />
+
+      {/* Floating Social Media Sidebar */}
+      <SocialSidebar />
 
       {/* Content Container */}
       <div className="relative z-10 h-full flex items-center">
@@ -77,8 +82,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-     
     </section>
   );
 }
+
+     

@@ -46,13 +46,17 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 mb-1">Phone</p>
-                  <a href="tel:+919247030111" className="text-gray-600 hover:text-red-700 transition-colors">
-                    +91 9247030111
+                  <a href="tel:+919247090111" className="text-gray-600 hover:text-red-700 transition-colors">
+                    +91 9247090111
                   </a>
                   <br />
+                  
                   <a href="tel:+916364512292" className="text-gray-600 hover:text-red-700 transition-colors">
                     +91 6364512292
                   </a>
+                  
+                  
+                 
                 </div>
               </div>
 
@@ -76,7 +80,10 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 mb-1">Address</p>
-                  <p className="text-gray-600">BTM 2nd Stage<br />Bangalore, India</p>
+                  <p className="text-gray-600 text-sm">
+                    #10, BTM 2nd Stage, Bangalore 68<br />
+                    No. 3, Service Road, 17th Main Rd, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068 3rd Floor
+                  </p>
                 </div>
               </div>
 
