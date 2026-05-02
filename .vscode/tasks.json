@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "problemMatcher": ["$eslint-stylish"],
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "problemMatcher": ["$tsc"],
+      "group": "build"
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint"],
+      "problemMatcher": ["$eslint-stylish"],
+      "group": "build"
+    },
+    {
+      "label": "start",
+      "type": "shell",
+      "command": "npm",
+      "args": ["start"],
+      "group": "build"
+    }
+  ]
+}
