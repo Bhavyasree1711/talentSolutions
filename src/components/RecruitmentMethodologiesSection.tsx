@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 
 const methodologies = [
@@ -7,19 +8,19 @@ const methodologies = [
     title: 'AI-Powered Matching',
     description: 'Predictive analytics technology to match candidates with roles instantly',
     benefits: ['Faster hiring', 'Predictive analytics', 'Higher retention'],
-    icon: '🤖'
+    image: '/images/aipowered.png'
   },
   {
     title: 'Remote Talent Pools',
     description: 'Access to global talent network with cloud collaboration capabilities',
     benefits: ['Global hiring', 'Cloud collaboration', 'Flexible teams'],
-    icon: '🌍'
+    image: '/images/remte.png'
   },
   {
     title: 'Skill Assessment Driven',
     description: 'Focus on real skills and competencies, not just qualifications',
     benefits: ['Real skill focus', 'Practical assessment', 'Better fit'],
-    icon: '✓'
+    image: '/images/skill.png'
   }
 ];
 
@@ -40,8 +41,18 @@ export default function RecruitmentMethodologiesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {methodologies.map((method, index) => (
             <ScrollReveal key={method.title} direction="up" delay={index * 150}>
-              <div className="h-full rounded-2xl bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100 hover:border-red-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-8">
-                <div className="text-5xl mb-4">{method.icon}</div>
+              <div className="h-full overflow-hidden rounded-2xl bg-white border-2 border-gray-100 hover:border-red-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="relative h-52 w-full bg-gray-100">
+                  <Image
+                    src={method.image}
+                    alt={method.title}
+                    fill
+                    sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+                    quality={100}
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="p-8">
                 <h3 className="text-2xl font-bold mb-3 leading-snug" style={{ color: '#0B1F3A' }}>
                   {method.title}
                 </h3>
@@ -57,6 +68,7 @@ export default function RecruitmentMethodologiesSection() {
                       <span className="text-sm font-medium text-gray-700">{benefit}</span>
                     </div>
                   ))}
+                </div>
                 </div>
               </div>
             </ScrollReveal>

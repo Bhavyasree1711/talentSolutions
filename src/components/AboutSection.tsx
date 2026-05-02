@@ -80,7 +80,7 @@ export default function AboutSection() {
               Our Leadership Team
             </h2>
             <p className="text-gray-500 text-base leading-relaxed">
-              Visionaries and innovators who drive DMX Tech Services forward every day.
+              Visionaries and innovators who drive DMX Talent Solutions forward every day.
             </p>
           </div>
 

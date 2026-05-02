@@ -1,15 +1,68 @@
 'use client';
 
+import { BriefcaseBusiness, GraduationCap, Handshake } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const trainingSteps = [
-  { number: 1, title: 'Profile Building', description: 'Build a compelling professional profile' },
-  { number: 2, title: 'Interview Preparation', description: 'Master interview techniques and strategies' },
-  { number: 3, title: 'Storytelling Skills', description: 'Learn to communicate your achievements effectively' },
-  { number: 4, title: 'Cloud & Digital Tech', description: 'Gain expertise in cloud and digital technologies' },
-  { number: 5, title: 'Certifications', description: 'Earn AWS, Azure, and industry certifications' },
-  { number: 6, title: 'Job Ready Placement', description: 'Direct placement into ready opportunities' },
+  { number: 1, title: 'Profile Building', description: 'Build a compelling professional profile', icon: 'user' },
+  { number: 2, title: 'Interview Preparation', description: 'Master interview techniques and strategies', icon: 'chat' },
+  { number: 3, title: 'Storytelling Skills', description: 'Learn to communicate your achievements effectively', icon: 'megaphone' },
+  { number: 4, title: 'Cloud & Digital Tech', description: 'Gain expertise in cloud and digital technologies', icon: 'cloud' },
+  { number: 5, title: 'Certifications', description: 'Earn AWS, Azure, and industry certifications', icon: 'badge' },
+  { number: 6, title: 'Job Ready Placement', description: 'Direct placement into ready opportunities', icon: 'briefcase' },
 ];
+
+function TrainingStepIcon({ icon }: { icon: string }) {
+  const iconClass = 'h-7 w-7';
+
+  switch (icon) {
+    case 'user':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M20 21a8 8 0 0 0-16 0" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      );
+    case 'chat':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+        </svg>
+      );
+    case 'megaphone':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M3 11v2a2 2 0 0 0 2 2h3l4 4V5L8 9H5a2 2 0 0 0-2 2z" />
+          <path d="M16 9a4 4 0 0 1 0 6" />
+          <path d="M19 7a7 7 0 0 1 0 10" />
+        </svg>
+      );
+    case 'cloud':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25" />
+          <path d="M8 17h8" />
+          <path d="M12 13v8" />
+        </svg>
+      );
+    case 'badge':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 3l2.5 1.5 3-.5 1.5 2.5 2.5 1.5-.5 3L22.5 14 21 16.5l.5 3-2.5 1.5-3-.5L12 22l-2.5-1.5-3 .5L4 19.5l.5-3L3 14l1.5-2.5-.5-3L7 7l1.5-2.5 3 .5z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      );
+    case 'briefcase':
+    default:
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="14" rx="2" />
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+          <path d="M2 13h20" />
+        </svg>
+      );
+  }
+}
 
 export default function TrainingServicesSection() {
   return (
@@ -37,12 +90,13 @@ export default function TrainingServicesSection() {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-100 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur" />
                 <div className="relative bg-white rounded-2xl p-8 border-2 border-gray-100 group-hover:border-red-300 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 h-full flex flex-col">
-                  {/* Step number badge */}
-                  <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center font-extrabold text-2xl text-white mb-6 group-hover:scale-110 transition-transform duration-300"
-                    style={{ backgroundColor: '#E63946' }}
-                  >
-                    {String(step.number).padStart(2, '0')}
+                  <div className="mb-6 flex items-center justify-between gap-4">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-50 to-blue-50 text-red-700 shadow-sm ring-1 ring-red-100 transition-transform duration-300 group-hover:scale-110">
+                      <TrainingStepIcon icon={step.icon} />
+                    </div>
+                    <span className="rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-extrabold tracking-wider text-red-700">
+                      STEP {String(step.number).padStart(2, '0')}
+                    </span>
                   </div>
 
                   <h3 className="text-2xl font-bold mb-3 leading-snug" style={{ color: '#0B1F3A' }}>
@@ -63,15 +117,43 @@ export default function TrainingServicesSection() {
         </div>
 
         {/* Feature highlights */}
+        {/* FEATURE HEADING */}
+<div className="mt-20 text-center mb-10">
+  <h3 className="text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#0B1F3A' }}>
+    Our Training Program Includes
+  </h3>
+  <p className="text-gray-600 max-w-xl mx-auto">
+    We ensure every learner gets practical exposure, expert guidance, and real industry opportunities.
+  </p>
+</div>
+
+{/* FEATURE CARDS */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: '👨‍🏫', title: 'Experienced Faculty', desc: 'Learn from industry experts with 15+ years of experience' },
-            { icon: '💼', title: 'Real-World Training', desc: 'Hands-on learning with live projects and case studies' },
-            { icon: '🤝', title: 'Industry Connections', desc: 'Network and get direct placement opportunities' },
+            {
+              icon: GraduationCap,
+              title: 'Experienced Faculty',
+              desc: 'Learn from industry experts with 15+ years of experience'
+            },
+            {
+              icon: BriefcaseBusiness,
+              title: 'Real-World Training',
+              desc: 'Hands-on learning with live projects and case studies'
+            },
+            {
+              icon: Handshake,
+              title: 'Industry Connections',
+              desc: 'Network and get direct placement opportunities'
+            },
           ].map((feature, i) => (
             <ScrollReveal key={i} direction="up" delay={i * 100}>
               <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-red-200 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-1">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                <div className="mb-5 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-50 to-blue-50 text-red-700 shadow-sm ring-1 ring-red-100 transition-transform duration-300 group-hover:scale-110">
+                    <feature.icon className="h-8 w-8" strokeWidth={2} />
+                  </div>
+                </div>
                 <h4 className="text-xl font-bold mb-2" style={{ color: '#0B1F3A' }}>
                   {feature.title}
                 </h4>

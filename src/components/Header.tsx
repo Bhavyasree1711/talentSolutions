@@ -34,7 +34,11 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link href="/" className="flex-shrink-0">
-            <DMXLogo size="large" />
+            {/* <DMXLogo size="nav"/> */}
+            <DMXLogo
+  size="nav"
+  className="text-sm font-semibold text-red-700 uppercase tracking-wide"
+/>
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,9 +56,7 @@ export default function Header() {
 
           {/* Right: Search + CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="w-9 h-9 flex items-center justify-center text-gray-600 hover:text-red-700 transition-colors" aria-label="Search">
-              <Search className="w-5 h-5" />
-            </button>
+            
             <a
               href="#contact"
               className="px-6 py-2.5 text-white font-bold text-xs rounded-lg transition-all duration-300 hover:shadow-lg tracking-wide uppercase flex items-center gap-1.5 hover:opacity-90"

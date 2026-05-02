@@ -5,11 +5,12 @@ import StatsSection from '@/components/StatsSection';
 import ServicesSection from '@/components/ServicesSection';
 import RecruitmentMethodologiesSection from '@/components/RecruitmentMethodologiesSection';
 import WhyChooseUsSection from '@/components/WhyChooseUsSection';
-import ContactSection from '@/components/ContactSection';
+
 import TrainingServicesSection from '@/components/TrainingServicesSection';
 import CoursesSection from '@/components/CoursesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CTASection from '@/components/CTASection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -24,10 +25,11 @@ export default function Home() {
       <RecruitmentMethodologiesSection />
        <TrainingServicesSection />
       <CoursesSection />
-      <ContactSection />
+      
 
       <TestimonialsSection />
       <CTASection />
+      <ContactSection />
       <Footer />
     </div>
   );

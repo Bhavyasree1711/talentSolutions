@@ -78,21 +78,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Mobile Badges */}
-      <div className="lg:hidden absolute bottom-8 left-4 right-4 z-20 grid grid-cols-2 gap-4">
-        <div className="bg-white rounded-xl shadow-lg p-3 border-2 text-center" style={{ borderColor: '#E63946' }}>
-          <div className="flex justify-center gap-0.5 mb-1">
-            <span style={{ color: '#E63946' }}>⭐</span>
-            <span style={{ color: '#E63946' }}>⭐</span>
-            <span style={{ color: '#E63946' }}>⭐</span>
-          </div>
-          <p className="text-xs font-semibold" style={{ color: '#0B1F3A' }}>Find jobs in global</p>
-        </div>
-        <div className="rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white p-4" style={{ background: 'linear-gradient(135deg, #E63946 0%, #0B1F3A 100%)' }}>
-          <p className="text-xl font-extrabold text-white">300+</p>
-          <p className="text-xs font-bold text-white">Vacancy</p>
-        </div>
-      </div>
+     
     </section>
   );
 }

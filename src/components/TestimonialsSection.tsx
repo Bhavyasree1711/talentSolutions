@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
@@ -8,27 +9,64 @@ const clientCompanies = [
   {
     name: 'Software One',
     industry: 'Enterprise Software',
-    icon: '💻',
+    logo: '/images/softwareone.png',
     projects: 'Cloud Solutions & DevOps'
   },
   {
     name: 'Esparsh',
     industry: 'Education & Training',
-    icon: '🎓',
+    logo: '/images/esparsh.png',
     projects: 'Talent Development'
   },
   {
     name: 'LearnSquare',
     industry: 'E-Learning Platform',
-    icon: '📚',
+    logo: '/images/learnsq.png',
+    projects: 'Training & Certification'
+  },
+   {
+    name: 'ALabs',
+    industry: 'E-Learning Platform',
+    logo: '/images/Alabs.png',
     projects: 'Training & Certification'
   },
   {
-    name: 'Times Digital',
+    name: 'Time4education',
     industry: 'Media & Publishing',
-    icon: '📰',
+    logo: '/images/time.png',
     projects: 'Content & Tech Teams'
   },
+   {
+    name: 'ProDiSyn Innovations',
+    industry: 'E-Learning Platform',
+    logo: '/images/pro.png',
+    projects: 'Training & Certification'
+  },
+  {
+    name: 'Designers',
+    industry: 'E-Learning Platform',
+    logo: '/images/designers.png',
+    projects: 'Training & Certification'
+  },
+  {
+    name: 'Freshroots Technologies',
+    industry: 'E-Learning Platform',
+    logo: '/images/freshroots.png',
+    projects: 'Training & Certification'
+  },
+  {
+    name: 'Motherson',
+    industry: 'E-Learning Platform',
+    logo: '/images/motherson.png',
+    projects: 'Training & Certification'
+  },
+  {
+    name: 'Persistant',
+    industry: 'E-Learning Platform',
+    logo: '/images/persis.png',
+    projects: 'Training & Certification'
+  },
+  
 ];
 
 const testimonials = [
@@ -82,37 +120,25 @@ export default function TestimonialsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {clientCompanies.map((company, index) => (
               <ScrollReveal key={company.name} direction="up" delay={index * 150}>
-                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border-2 border-gray-100 hover:border-red-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border-2 border-gray-100 hover:border-red-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col items-center text-center">
                   {/* Top accent line */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-t-2xl" />
 
                   {/* Company Icon */}
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {company.icon}
+                  <div className="relative mb-6 h-28 w-28 md:h-32 md:w-32 overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                    <Image
+                      src={company.logo}
+                      alt={`${company.name} logo`}
+                      fill
+                      sizes="(min-width: 768px) 128px, 112px"
+                      className="object-contain p-3"
+                    />
                   </div>
 
                   {/* Company Name */}
-                  <h3 className="text-2xl font-bold mb-2 leading-snug" style={{ color: '#0B1F3A' }}>
+                  <h3 className="text-2xl font-bold mb-2 leading-snug" style={{ color: '#E63946' }}>
                     {company.name}
                   </h3>
-
-                  {/* Industry */}
-                  <p className="text-sm font-semibold text-red-700 uppercase tracking-wide mb-4">
-                    {company.industry}
-                  </p>
-
-                  {/* Description */}
-                  <p className="text-gray-600 leading-relaxed mb-6 flex-1">
-                    {company.projects}
-                  </p>
-
-                  {/* CTA */}
-                  <div className="flex items-center gap-2 text-red-700 font-bold text-sm">
-                    <span>Partnership</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
                 </div>
               </ScrollReveal>
             ))}
