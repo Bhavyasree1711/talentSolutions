@@ -37,12 +37,12 @@ export default function AwsQuickSightPage() {
               Enroll Now
             </Link>
           </div>
-          <div className="md:w-1/2 relative h-64">
+          <div className="md:w-1/2 relative h-72 lg:h-[400px] w-full mt-12 md:mt-0 lg:ml-10 rounded-2xl overflow-hidden shadow-2xl border border-white/20 transform hover:scale-105 transition duration-500">
             <Image
-              src="/images/aws-quicksight.png"
+              src="/images/aws-quicksight-blue.png"
               alt="AWS QuickSight Training"
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
         </div>
@@ -93,3 +93,5 @@ export default function AwsQuickSightPage() {
     </div>
   );
 }
+
+
