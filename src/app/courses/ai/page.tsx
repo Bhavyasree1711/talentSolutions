@@ -68,10 +68,10 @@ export default function AIAndDataCategoryPage() {
         <div className="absolute top-20 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-6">
             <Link
-              href="/courses"
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-red-700 transition-all"
+              href="/#training-categories"
+              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-red-700 transition-all shadow-sm group"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
               Back to All Courses
             </Link>
           </div>
