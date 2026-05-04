@@ -26,7 +26,7 @@ export default function CTASection() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
             </a>
-            <a href="tel:+916364512292" className="px-8 py-4 bg-white/10 backdrop-blur text-white font-bold text-sm rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 tracking-wide uppercase">
+            <a href="tel:+91 9247030111" className="px-8 py-4 bg-white/10 backdrop-blur text-white font-bold text-sm rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 tracking-wide uppercase">
               SCHEDULE A CALL
             </a>
           </div>
