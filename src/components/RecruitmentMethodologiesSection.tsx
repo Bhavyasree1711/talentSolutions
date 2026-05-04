@@ -26,9 +26,9 @@ const methodologies = [
 
 export default function RecruitmentMethodologiesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal direction="up" className="text-center mb-16">
+        <ScrollReveal direction="up" className="text-center mb-8">
           <span className="text-sm font-bold text-red-700 uppercase tracking-widest">Our Approach</span>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-outfit)', color: '#0B1F3A' }}>
             Modern Recruitment<br />Methodologies

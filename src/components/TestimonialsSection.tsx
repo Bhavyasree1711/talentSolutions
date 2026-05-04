@@ -185,7 +185,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
             </div>
-            <button onClick={prev} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-18 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-50 hover:text-red-700 transition-all duration-300 hover:shadow-xl" aria-label="Previous">
+            <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-50 hover:text-red-700 transition-all duration-300 hover:shadow-xl" aria-label="Previous">
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-50 hover:text-red-700 transition-all duration-300 hover:shadow-xl" aria-label="Next">

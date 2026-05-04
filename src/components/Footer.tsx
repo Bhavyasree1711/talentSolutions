@@ -15,10 +15,10 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer" className="text-gray-300 relative" style={{ backgroundColor: '#0f1d33' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer id="footer" className="text-gray-300 relative fixed bottom-0 left-0 right-0 z-10" style={{ backgroundColor: '#0f1d33' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
           {/* Company Info */}
           <div>
@@ -112,8 +112,8 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <Mail className="w-5 h-5 text-red-500 flex-shrink-0" />
               <p className="text-sm text-gray-400">
-                <a href="mailto:info@dmxtechservices.com" className="hover:text-red-400">
-                  info@dmxtechservices.com
+                <a href="mailto:s.siddeswara@dmxorg.com" className="hover:text-red-400">
+                  s.siddeswara@dmxorg.com
                 </a>
               </p>
             </div>

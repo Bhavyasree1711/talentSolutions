@@ -40,7 +40,7 @@ export default function SocialSidebar() {
     { id: 'facebook', icon: FacebookIcon, url: 'https://www.facebook.com/profile.php?id=61573804807368', label: 'Facebook', colorClass: 'text-[#1877f2] hover:bg-[#1877f2] hover:border-[#1877f2]' },
     { id: 'instagram', icon: InstagramIcon, url: 'https://www.instagram.com/dmxtechservices', label: 'Instagram', colorClass: 'text-[#E4405F] hover:bg-[#E4405F] hover:border-[#E4405F]' },
     { id: 'website', icon: Globe, url: 'https://www.dmxtechservices.com', label: 'Website', colorClass: 'text-[#0B1F3A] hover:bg-[#0B1F3A] hover:border-[#0B1F3A]' },
-    { id: 'email', icon: Mail, url: 'mailto:info@dmxtechservices.com', label: 'Email', colorClass: 'text-[#EA4335] hover:bg-[#EA4335] hover:border-[#EA4335]' },
+    { id: 'email', icon: Mail, url: 'mailto:s.siddeswara@dmxorg.com', label: 'Email', colorClass: 'text-[#EA4335] hover:bg-[#EA4335] hover:border-[#EA4335]' },
     { id: 'whatsapp', icon: WhatsappIcon, url: 'https://wa.me/919247090111', label: 'WhatsApp', colorClass: 'text-[#25D366] hover:bg-[#25D366] hover:border-[#25D366]' },
   ];
 
