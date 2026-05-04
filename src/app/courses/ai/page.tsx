@@ -136,7 +136,7 @@ function CourseCard({ course }: { course: Course }) {
         </div>
 
         {/* CONTENT */}
-        <div className="p-6 flex flex-col text-center">
+        <div className="p-6 flex flex-col text-center flex-grow">
 
           <div className="mx-auto w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-[#0B1F3A] group-hover:text-[#E63946] group-hover:bg-red-50 transition">
             <Icon className="w-6 h-6" />
