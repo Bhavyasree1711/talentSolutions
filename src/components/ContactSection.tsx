@@ -80,10 +80,21 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 mb-1">Address</p>
-                  <p className="text-gray-600 text-sm">
-                    #10, BTM 2nd Stage, Bangalore 68<br />
-                    No. 3, Service Road, 17th Main Rd, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068 3rd Floor
+                  <p className="text-gray-600 text-sm mb-2">
+                    <strong>DMX TECH SERVICES PVT.LTD - BTM 1st Stage</strong><br />
+                    No. 3, Service Road, 17th Main Rd, 3rd Floor, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068
                   </p>
+                  <p className="text-gray-600 text-sm mb-2">
+                    <strong>Near KEB Office</strong>
+                  </p>
+                  <p className="text-gray-600 text-sm mb-2">
+                    <strong>Mon-Sat: 09:00-19:00</strong>
+                  </p>
+                  <div className="flex gap-4 mt-2">
+                    <a href="https://www.google.com/maps/place/KTM+Husqvarna+BTM+Layout/@12.9167554,77.6109115,17z/data=!4m6!3m5!1s0x3bae14fc2cf4bbff:0xd21809b7c1316646!8m2!3d12.9167445!4d77.6108699!16s%2Fg%2F12htvmww9?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 font-medium text-sm">
+                      Google Maps
+                    </a>
+                  </div>
                 </div>
               </div>
 
