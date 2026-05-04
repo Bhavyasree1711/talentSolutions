@@ -69,7 +69,7 @@ export default function AIAndDataCategoryPage() {
           <div className="max-w-7xl mx-auto px-6">
             <Link
               href="/courses"
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-[#E63946] transition-all"
+              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-red-700 transition-all"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to All Courses
@@ -138,11 +138,11 @@ function CourseCard({ course }: { course: Course }) {
         {/* CONTENT */}
         <div className="p-6 flex flex-col text-center flex-grow">
 
-          <div className="mx-auto w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-[#0B1F3A] group-hover:text-[#E63946] group-hover:bg-red-50 transition">
+          <div className="mx-auto w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-[#0B1F3A] group-hover:text-red-700 group-hover:bg-red-50 transition">
             <Icon className="w-6 h-6" />
           </div>
 
-          <h3 className="text-lg font-bold text-[#0B1F3A] mb-3 group-hover:text-[#E63946]">
+          <h3 className="text-lg font-bold text-[#0B1F3A] mb-3 group-hover:text-red-700">
             {course.title}
           </h3>
 
@@ -151,7 +151,7 @@ function CourseCard({ course }: { course: Course }) {
           </p>
 
           {/* BUTTON */}
-          <div className="mt-auto px-4 py-2.5 bg-gray-50 text-[#0B1F3A] font-bold text-sm rounded-lg group-hover:bg-[#E63946] group-hover:text-white transition flex items-center justify-center gap-2 border">
+          <div className="mt-auto px-4 py-2.5 bg-gray-50 text-[#0B1F3A] font-bold text-sm rounded-lg group-hover:bg-red-700 group-hover:text-white transition flex items-center justify-center gap-2 border">
             View Details
             <svg className="w-4 h-4 group-hover:translate-x-1 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7M21 12H3" />

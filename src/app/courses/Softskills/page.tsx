@@ -55,7 +55,7 @@ export default function SoftSkillsCategoryPage() {
           <div className="max-w-7xl mx-auto px-6">
             <Link
               href="/#training-categories"
-              className="inline-flex items-center justify-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-[#E63946] transition-all shadow-sm group"
+              className="inline-flex items-center justify-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-red-700 transition-all shadow-sm group"
             >
               <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
               Back to All Courses
@@ -101,12 +101,12 @@ function CourseCard({ course }: { course: any }) {
 
         {/* Card Content */}
         <div className="p-6 flex-grow flex flex-col text-center">
-          <div className="mx-auto w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-[#0B1F3A] group-hover:scale-110 group-hover:text-[#E63946] group-hover:bg-red-50 transition-all duration-300">
+          <div className="mx-auto w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-[#0B1F3A] group-hover:scale-110 group-hover:text-red-700 group-hover:bg-red-50 transition-all duration-300">
             <Icon className="w-6 h-6" />
           </div>
-          <h3 className="text-lg font-bold text-[#0B1F3A] mb-3 group-hover:text-[#E63946] transition-colors">{course.title}</h3>
+          <h3 className="text-lg font-bold text-[#0B1F3A] mb-3 group-hover:text-red-700 transition-colors">{course.title}</h3>
           <p className="text-sm text-gray-600 flex-grow leading-relaxed mb-6">{course.description}</p>
-          <div className="mt-auto w-full px-4 py-2.5 bg-gray-50 text-[#0B1F3A] font-bold text-sm rounded-lg group-hover:bg-[#E63946] group-hover:text-white transition-colors duration-300 uppercase tracking-wide flex items-center justify-center gap-2 border border-gray-100">
+          <div className="mt-auto w-full px-4 py-2.5 bg-gray-50 text-[#0B1F3A] font-bold text-sm rounded-lg group-hover:bg-red-700 group-hover:text-white transition-colors duration-300 uppercase tracking-wide flex items-center justify-center gap-2 border border-gray-100">
             View Details
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />

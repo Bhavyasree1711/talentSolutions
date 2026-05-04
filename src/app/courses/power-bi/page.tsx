@@ -23,56 +23,37 @@ export default function PowerBIPage() {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen pb-20">
-
-      {/* TOP BACK BAR */}
-      <div className="bg-white border-b py-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <Link
-            href="/courses/cloud-devops"
-            className="inline-flex items-center text-sm font-semibold text-[#0B1F3A] hover:text-red-700 transition"
-          >
-            <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Cloud Courses
-          </Link>
-        </div>
-      </div>
-
-      {/* HERO */}
-      <section className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-black py-16">
+    <div className="bg-gray-50 min-h-screen pb-20 relative">
+      {/* HERO SECTION */}
+      <section className="relative bg-gradient-to-r from-blue-900 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
-
           <div className="md:w-1/2">
-            <h1 className="text-5xl font-bold mb-4">
-              Power BI Training
-            </h1>
-
-            <p className="text-lg mb-6">
-              Transform raw data into powerful insights using Microsoft Power BI,
-              dashboards, and advanced analytics.
+            <h1 className="text-5xl font-bold mb-4">Power BI Training</h1>
+            <p className="text-lg leading-relaxed mb-6">
+              Transform raw data into powerful insights using Microsoft Power BI, dashboards, and advanced analytics. Learn to visualize and share business intelligence effectively.
             </p>
-
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition"
-            >
+            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>
-
           <div className="md:w-1/2 relative h-64">
-            <Image
-              src="/images/powerbi.png"
-              alt="Power BI Training"
-              fill
-              className="object-contain"
-            />
+            <Image src="/images/powerbi.png" alt="Power BI Training" fill className="object-contain" />
           </div>
-
         </div>
       </section>
+
+      {/* BACK BUTTON (OVERLAY) */}
+      <div className="absolute top-4 left-4 z-20">
+        <Link
+          href="/courses/cloud-devops"
+          className="inline-flex items-center text-sm font-semibold text-white bg-red-700 px-4 py-2 rounded-lg hover:bg-red-800 transition shadow-md"
+        >
+          <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Cloud Courses
+        </Link>
+      </div>
 
       {/* CURRICULUM */}
       <section className="py-20">
