@@ -9,14 +9,70 @@ export default function DataWarehousePage() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   const curriculum = [
-    "Data Warehousing Concepts",
-    "ETL/ELT Pipelines",
-    "Star & Snowflake Schema",
-    "Data Modeling Techniques",
-    "SQL for Analytics",
-    "Cloud Data Warehousing (Redshift, BigQuery)",
-    "Data Governance & Security",
-    "Capstone: Build a Data Warehouse",
+    {
+      title: "Data Warehousing Fundamentals",
+      topics: [
+        "Core Concepts: OLTP vs. OLAP Systems",
+        "Data Warehouse Architecture: Tiered Structure & Components",
+        "Introduction to Dimensional Modeling: Star & Snowflake Schemas"
+      ]
+    },
+    {
+      title: "ETL & Data Integration Pipelines",
+      topics: [
+        "Understanding ETL (Extract, Transform, Load) vs. ELT",
+        "Data Cleaning, Profiling & Normalization Techniques",
+        "Introduction to Popular ETL Tools: Informatica, Talend, and SSIS"
+      ]
+    },
+    {
+      title: "Dimensional Modeling & Schema Design",
+      topics: [
+        "Designing Fact & Dimension Tables",
+        "Handling Slowly Changing Dimensions (SCD Type 1, 2, 3)",
+        "Aggregates, Hierarchies & Data Mart Design"
+      ]
+    },
+    {
+      title: "SQL for Data Warehousing",
+      topics: [
+        "Advanced SQL: Window Functions, CTEs & Recursive Queries",
+        "Query Optimization for Large Datasets",
+        "Writing Complex Stored Procedures & User Defined Functions"
+      ]
+    },
+    {
+      title: "Cloud Data Warehousing Solutions",
+      topics: [
+        "Cloud Architecture Overview: AWS Redshift, Google BigQuery, Snowflake",
+        "Data Loading Strategies in the Cloud (S3/GCS to Warehouse)",
+        "Serverless Data Warehousing & Scaling Strategies"
+      ]
+    },
+    {
+      title: "Data Governance & Metadata Management",
+      topics: [
+        "Data Quality Frameworks & Business Glossaries",
+        "Metadata Catalogs & Data Lineage Tracing",
+        "Implementing Master Data Management (MDM) Principles"
+      ]
+    },
+    {
+      title: "Enterprise Data Strategy",
+      topics: [
+        "Data Lake vs. Data Warehouse vs. Data Lakehouse",
+        "Building Real-time Data Warehouses with CDC (Change Data Capture)",
+        "Security & Compliance: Data Masking, Encryption & Access Control"
+      ]
+    },
+    {
+      title: "Reporting & Business Intelligence Integration",
+      topics: [
+        "Connecting BI Tools (Power BI, Tableau) to the Warehouse",
+        "Designing Optimized Semantic Layers for Reporting",
+        "Building Automated Data Refresh & Alerting Workflows"
+      ]
+    }
   ];
 
   return (
@@ -56,13 +112,43 @@ export default function DataWarehousePage() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-[#0B1F3A] mb-8">Data Warehouse Curriculum</h2>
           <div className="space-y-4">
-            {curriculum.map((item, i) => (
-              <div key={i} className="border rounded-lg overflow-hidden">
-                <button onClick={() => toggle(i)} className="w-full px-6 py-4 bg-white font-semibold flex justify-between">
-                  {item}
-                  <span>{openIndex === i ? "-" : "+"}</span>
+            {curriculum.map((item, index) => (
+              <div key={index} className="border rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
+                {/* HEADER */}
+                <button
+                  onClick={() => toggle(index)}
+                  className="w-full text-left px-6 py-4 bg-white text-[#0B1F3A] font-bold hover:bg-gray-50 flex justify-between items-center transition-colors focus:outline-none"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-xs font-bold">
+                      {index + 1}
+                    </span>
+                    {item.title}
+                  </span>
+                  <span className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                    <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
                 </button>
-                {openIndex === i && <div className="px-6 py-4 bg-gray-50">Detailed information about {item}.</div>}
+
+                {/* CONTENT */}
+                <div 
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 py-5 bg-gray-50 border-t border-gray-100">
+                    <ul className="space-y-3">
+                      {item.topics.map((topic, tIdx) => (
+                        <li key={tIdx} className="flex items-start gap-3 text-gray-600">
+                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0" />
+                          <span className="text-sm leading-relaxed">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
