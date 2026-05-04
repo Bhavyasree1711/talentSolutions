@@ -8,7 +8,7 @@ const awsCourses = [
     id: 'aws-iaas',
     title: 'AWS IaaS Training',
     description: 'Learn the fundamentals of Amazon Web Services Infrastructure as a Service, including EC2, S3, and VPC networking.',
-    image: '/images/aws.png',
+    image: '/images/aws-iaas-blue.png',
     icon: Cloud,
   },
   {
@@ -22,14 +22,14 @@ const awsCourses = [
     id: 'aws-quicksight',
     title: 'AWS QuickSight Training',
     description: 'Build interactive dashboards, perform advanced analytics, and visualize complex data leveraging AWS QuickSight.',
-    image: '/images/aws-quicksight.png',
+    image: '/images/aws-quicksight-blue.png',
     icon: Activity,
   },
   {
     id: 'aws-iot',
     title: 'AWS IoT Training',
     description: 'Connect, manage, and scale IoT devices securely using AWS IoT Core, edge services, and analytics.',
-    image: '/images/aws-iot.png',
+    image: '/images/aws-iot-blue.png',
     icon: Cpu,
   }
 ];
@@ -40,28 +40,28 @@ const azureCourses = [
     id: 'microsoft-azure',
     title: 'Microsoft Azure Training',
     description: 'Comprehensive training on Azure cloud services, virtual machines, networking, and enterprise cloud architecture.',
-    image: '/images/azure2.png',
+    image: '/images/microsoft-azure-blue.png',
     icon: Cloud,
   },
   {
     id: 'azure-devops',
     title: 'Azure DevOps Training',
     description: 'Implement modern DevOps practices, continuous delivery, and agile project planning with Azure DevOps.',
-    image: '/images/azuredevops.png',
+    image: '/images/azure-devops-blue.png',
     icon: Server,
   },
   {
     id: 'azure-iot',
     title: 'Azure IoT Training',
     description: 'Design and deploy highly scalable Internet of Things solutions using Azure IoT Hub and stream analytics.',
-    image: '/images/azureiot.png',
+    image: '/images/azure-iot-blue.png',
     icon: Database,
   },
   {
     id: 'power-bi',
     title: 'Power BI Training',
     description: 'Transform raw data into actionable insights and build interactive, enterprise-grade reports with Microsoft Power BI.',
-    image: '/images/powerbi.png',
+    image: '/images/power-bi-blue.png',
     icon: BarChart,
   }
 ];
@@ -170,3 +170,4 @@ function CourseCard({ course }: { course: any }) {
     </Link>
   );
 }
+
