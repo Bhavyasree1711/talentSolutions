@@ -13,14 +13,70 @@ export default function AwsIaasPage() {
   };
 
   const curriculum = [
-    'Introduction to AWS and Cloud Computing',
-    'Elastic Compute Cloud (EC2) Deep Dive',
-    'Simple Storage Service (S3) & Glacier',
-    'Virtual Private Cloud (VPC) Fundamentals',
-    'Identity and Access Management (IAM)',
-    'Elastic Load Balancing (ELB) and Auto Scaling',
-    'Monitoring with CloudWatch',
-    'Final Capstone Project: Deploying a Scalable Web Application',
+    {
+      title: "Cloud Fundamentals & AWS Global Infrastructure",
+      topics: [
+        "Introduction to Cloud Computing & AWS Overview",
+        "AWS Regions, Availability Zones, and Edge Locations",
+        "AWS Shared Responsibility Model & Compliance"
+      ]
+    },
+    {
+      title: "Compute Services: EC2 Deep Dive",
+      topics: [
+        "Launching & Configuring EC2 Instances",
+        "EBS (Elastic Block Store) & Instance Store Optimization",
+        "Security Groups, Key Pairs & AMI Management"
+      ]
+    },
+    {
+      title: "Networking: Virtual Private Cloud (VPC)",
+      topics: [
+        "VPC Architecture: Subnets, IGW & Route Tables",
+        "NAT Gateways & Bastion Host Configuration",
+        "VPC Peering & Endpoint Services"
+      ]
+    },
+    {
+      title: "Storage Solutions: S3, EFS & Glacier",
+      topics: [
+        "S3 Bucket Policies, Versioning & Lifecycle Rules",
+        "EFS Performance & Multi-AZ Connectivity",
+        "Glacier Deep Archive & Retrieval Strategies"
+      ]
+    },
+    {
+      title: "High Availability & Load Balancing",
+      topics: [
+        "Application (ALB) & Network Load Balancer (NLB)",
+        "Auto Scaling Group (ASG) Policies & Dynamic Scaling",
+        "Health Checks & Target Group Management"
+      ]
+    },
+    {
+      title: "Identity & Access Management (IAM)",
+      topics: [
+        "Users, Groups, Roles & Custom IAM Policies",
+        "Multi-Factor Authentication (MFA) & Root Account Security",
+        "AWS STS & Federated Access Overview"
+      ]
+    },
+    {
+      title: "Monitoring, Governance & Logging",
+      topics: [
+        "CloudWatch Dashboards, Logs & Alarms",
+        "AWS CloudTrail for API Auditing & Compliance",
+        "AWS Config & Trusted Advisor Insights"
+      ]
+    },
+    {
+      title: "Enterprise AWS Strategy",
+      topics: [
+        "AWS Organizations & Service Control Policies (SCPs)",
+        "Multi-Account Governance & Landing Zone Concepts",
+        "Advanced Cost Management & Savings Plans"
+      ]
+    }
   ];
 
   return (
@@ -80,21 +136,42 @@ export default function AwsIaasPage() {
           </p>
           <div className="space-y-4">
             {curriculum.map((item, index) => (
-              <div key={index} className="border rounded-lg overflow-hidden">
+              <div key={index} className="border rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
+                {/* HEADER */}
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full text-left px-6 py-4 bg-white text-[#0B1F3A] font-semibold hover:bg-gray-100 focus:outline-none flex justify-between items-center"
+                  className="w-full text-left px-6 py-4 bg-white text-[#0B1F3A] font-bold hover:bg-gray-50 flex justify-between items-center transition-colors focus:outline-none"
                 >
-                  {item}
-                  <span className="ml-2">
-                    {openIndex === index ? '-' : '+'}
+                  <span className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-xs font-bold">
+                      {index + 1}
+                    </span>
+                    {item.title}
+                  </span>
+                  <span className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                    <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </span>
                 </button>
-                {openIndex === index && (
-                  <div className="px-6 py-4 bg-gray-50 text-gray-700">
-                    Detailed information about {item}.
+
+                {/* CONTENT */}
+                <div 
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 py-5 bg-gray-50 border-t border-gray-100">
+                    <ul className="space-y-3">
+                      {item.topics.map((topic, tIdx) => (
+                        <li key={tIdx} className="flex items-start gap-3 text-gray-600">
+                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0" />
+                          <span className="text-sm leading-relaxed">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
