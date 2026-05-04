@@ -86,12 +86,16 @@ export default function Footer() {
             <div className="flex items-start gap-3 mb-4">
               <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
               <div>
+                <p className="text-sm text-gray-400 mb-1 font-semibold">
+                  DMX TECH SERVICES PVT.LTD - BTM 1st Stage
+                </p>
                 <p className="text-sm text-gray-400 mb-1">
-                  #10, BTM 2nd Stage, Bangalore 68
+                  No. 3, Service Road, 17th Main Rd, 3rd Floor, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068
                 </p>
-                <p className="text-sm text-gray-400">
-                  No. 3, Service Road, 17th Main Rd, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068 3rd Floor
+                <p className="text-sm text-gray-400 mb-1 font-semibold">
+                  Near KEB Office
                 </p>
+                
               </div>
             </div>
 

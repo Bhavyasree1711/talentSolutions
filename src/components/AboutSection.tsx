@@ -57,7 +57,7 @@ export default function AboutSection() {
                   </div>
                 ))}
               </div>
-              <a href="#services" className="inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl tracking-wide uppercase group" style={{ backgroundColor: '#1e3a5f' }}>
+              <a href="#talents" className="inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl tracking-wide uppercase group" style={{ backgroundColor: '#1e3a5f' }}>
                 DISCOVER MORE
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
