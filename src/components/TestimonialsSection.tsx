@@ -21,7 +21,7 @@ const clientCompanies = [
   {
     name: 'LearnSquare',
     industry: 'E-Learning Platform',
-    logo: '/images/learnsq.png',
+    logo: '/images/learnsquare.png',
     projects: 'Training & Certification'
   },
    {
@@ -39,31 +39,31 @@ const clientCompanies = [
    {
     name: 'ProDiSyn Innovations',
     industry: 'E-Learning Platform',
-    logo: '/images/pro.png',
+    logo: '/images/prodi.png',
     projects: 'Training & Certification'
   },
   {
     name: 'Designers',
     industry: 'E-Learning Platform',
-    logo: '/images/designers.png',
+    logo: '/images/design.png',
     projects: 'Training & Certification'
   },
   {
     name: 'Freshroots Technologies',
     industry: 'E-Learning Platform',
-    logo: '/images/freshroots.png',
+    logo: '/images/fresh.png',
     projects: 'Training & Certification'
   },
   {
     name: 'Motherson',
     industry: 'E-Learning Platform',
-    logo: '/images/motherson.png',
+    logo: '/images/mother.png',
     projects: 'Training & Certification'
   },
   {
     name: 'Persistant',
     industry: 'E-Learning Platform',
-    logo: '/images/persis.png',
+    logo: '/images/persist.png',
     projects: 'Training & Certification'
   },
   

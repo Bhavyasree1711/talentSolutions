@@ -1,119 +1,100 @@
 'use client';
 
-import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import ScrollReveal from './ScrollReveal';
 
 const courseCategories = [
   {
-    name: 'Cloud & DevOps',
-    icon: '☁️',
-    courses: ['AWS IaaS', 'AWS DevOps', 'AWS QuickSight', 'AWS IoT', 'Azure Training', 'Azure DevOps', 'Azure IoT', 'Power BI']
+    title: 'Cloud & DevOps',
+    slug: 'cloud-devops',
+    description: 'Master AWS, Azure, and modern CI/CD practices to build and deploy scalable cloud infrastructure.',
+    image: '/images/cloud.png',
+    borderColor: 'border-red-600',
   },
   {
-    name: 'AI & Data',
-    icon: '🤖',
-    courses: ['Artificial Intelligence', 'Machine Learning', 'Data Science', 'Data Warehouse', 'Python for AI', 'Deep Learning', 'Natural Language Processing', 'Big Data']
+    title: 'AI & Data Science',
+    slug: 'ai',
+    description: 'Dive deep into Artificial Intelligence, Machine Learning algorithms, and advanced Data Analytics.',
+    image: '/images/aipowerded.png',
+    borderColor: 'border-red-700',
   },
   {
-    name: 'Security',
-    icon: '🔒',
-    courses: ['Cyber Security Basics', 'VAPT Remediation', 'Secure DevOps', 'Security Frameworks', 'Ethical Hacking', 'Cloud Security', 'Compliance & Governance', 'Threat Intelligence']
+    title: 'Cyber Security',
+    slug: 'security',
+    description: 'Learn to protect networks, secure applications, and master ethical hacking fundamentals.',
+    image: '/images/security.png',
+    borderColor: 'border-red-600',
   },
   {
-    name: 'Soft Skills',
-    icon: '💼',
-    courses: ['Communication Skills', 'Presentation Skills', 'Interview Skills', 'Teaming Skills', 'Leadership', 'Project Management', 'Problem Solving', 'Time Management']
+    title: 'Soft Skills Training',
+    slug: 'Softskills', // Matches the folder you created
+    description: 'Develop essential leadership, communication, and professional workplace skills to accelerate your career.',
+    image: '/images/Softskills.png',
+    borderColor: 'border-red-700',
   },
 ];
 
 export default function CoursesSection() {
-  const [activeTab, setActiveTab] = useState(0);
-
   return (
-    <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
-      <div className="absolute right-0 top-1/3 w-96 h-96 bg-red-50 rounded-full -translate-x-1/2 opacity-40 blur-3xl" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="training-categories" className="py-20 lg:py-28 bg-gray-50 border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
         <ScrollReveal direction="up" className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="w-12 h-1" style={{ backgroundColor: '#E63946' }} />
-            <span className="text-sm font-bold text-red-700 uppercase tracking-widest">COURSES</span>
+            <span className="text-sm font-bold text-red-700 uppercase tracking-widest">TRAINING PROGRAMS</span>
             <div className="w-12 h-1" style={{ backgroundColor: '#E63946' }} />
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold mb-4 leading-tight" style={{ fontFamily: 'var(--font-outfit)', color: '#0B1F3A' }}>
-            Explore Our Training<br />Program
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight" style={{ fontFamily: 'var(--font-outfit)', color: '#0B1F3A' }}>
+            Explore Our Course Categories
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Comprehensive courses across Cloud, AI, Security, and Soft Skills
+            Industry-aligned training programs designed to equip you with the most in-demand technical and professional skills.
           </p>
         </ScrollReveal>
 
-        {/* Category tabs */}
-        <div className="flex flex-wrap gap-4 justify-center mb-12">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {courseCategories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveTab(index)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 uppercase tracking-wide ${
-                activeTab === index
-                  ? 'text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-              style={activeTab === index ? { backgroundColor: '#E63946' } : {}}
-            >
-              <span className="text-lg">{category.icon}</span>
-              {category.name}
-            </button>
+            <ScrollReveal key={category.slug} direction="up" delay={index * 100}>
+              <Link href={`/courses/${category.slug}`} className="block h-full group">
+                <div className={`border-b-4 ${category.borderColor} rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white h-full flex flex-col`}>
+                  
+                  {/* Image Container */}
+                  <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+
+                  {/* Content Container */}
+                  <div className="p-6 flex-grow flex flex-col text-center">
+                    <h3 className="text-xl font-bold mb-3 text-[#0B1F3A] group-hover:text-red-700 transition-colors">
+                      {category.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-6">
+                      {category.description}
+                    </p>
+                    
+                    <span className="mt-auto inline-flex items-center justify-center w-full px-4 py-3 bg-gray-50 text-[#0B1F3A] font-bold text-sm rounded-lg group-hover:bg-red-700 group-hover:text-white transition-all duration-300 uppercase tracking-wide">
+                      View Courses
+                      <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
 
-        {/* Active category courses grid */}
-        <ScrollReveal direction="up">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {courseCategories[activeTab].courses.map((course, index) => (
-              <div
-                key={index}
-                className="group bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 border-2 border-gray-100 hover:border-red-300 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
-              >
-                <div className="text-sm font-bold text-red-700 mb-2 uppercase tracking-widest group-hover:scale-105 transition-transform">
-                  {course}
-                </div>
-                <p className="text-xs text-gray-500">{courseCategories[activeTab].name}</p>
-                <a
-                  href="#contact"
-                  className="mt-4 inline-flex items-center gap-1 text-xs text-red-700 font-bold hover:text-red-800 transition-colors"
-                >
-                  Enroll
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-
-        {/* Additional benefits section */}
-        <div className="mt-16 bg-gradient-to-r from-red-50 to-blue-50 rounded-2xl p-10 border border-red-100">
-          <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#0B1F3A' }}>
-            What You Will Get
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { icon: '🎯', label: 'Target-oriented Attention' },
-              { icon: '🧠', label: 'Skill & Mindset Development' },
-              { icon: '💻', label: 'Live Project Experience' },
-              { icon: '💰', label: 'Affordable Fees' },
-              { icon: '🗺️', label: 'Career Guidance' },
-              { icon: '🏆', label: 'Competitive Learning' },
-            ].map((item, i) => (
-              <div key={i} className="text-center group cursor-pointer">
-                <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
-                <p className="text-xs font-medium text-gray-700 leading-tight">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

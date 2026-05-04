@@ -8,19 +8,19 @@ const methodologies = [
     title: 'AI-Powered Matching',
     description: 'Predictive analytics technology to match candidates with roles instantly',
     benefits: ['Faster hiring', 'Predictive analytics', 'Higher retention'],
-    image: '/images/aipowered.png'
+    image: '/images/aipowerded.png'
   },
   {
     title: 'Remote Talent Pools',
     description: 'Access to global talent network with cloud collaboration capabilities',
     benefits: ['Global hiring', 'Cloud collaboration', 'Flexible teams'],
-    image: '/images/remte.png'
+    image: '/images/remote.png'
   },
   {
     title: 'Skill Assessment Driven',
     description: 'Focus on real skills and competencies, not just qualifications',
     benefits: ['Real skill focus', 'Practical assessment', 'Better fit'],
-    image: '/images/skill.png'
+    image: '/images/skillassess.png'
   }
 ];
 
