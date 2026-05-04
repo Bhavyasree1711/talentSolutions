@@ -22,63 +22,37 @@ export default function InterviewSkillsPage() {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen pb-20">
-
-      {/* ✅ TOP BACK BAR */}
-      <div className="bg-white border-b py-4">
-        <div className="max-w-7xl mx-auto px-6">
-          <Link
-            href="/courses/Softskills"
-            className="inline-flex items-center text-sm font-semibold text-[#0B1F3A] hover:text-red-700 transition"
-          >
-            <svg
-              className="w-4 h-4 mr-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Soft Skills Courses
-          </Link>
-        </div>
-      </div>
-
-      {/* ✅ HERO */}
-      <section className="bg-gradient-to-r from-purple-900 to-indigo-600 text-white py-16">
+    <div className="bg-gray-50 min-h-screen pb-20 relative">
+      {/* HERO SECTION */}
+      <section className="relative bg-gradient-to-r from-blue-900 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
-
-          {/* LEFT */}
           <div className="md:w-1/2">
-            <h1 className="text-5xl font-bold mb-4">
-              Interview Skills Training
-            </h1>
-
-            <p className="text-lg mb-6">
-              Build confidence, handle tough questions, and master behavioral interview techniques to land your dream job.
+            <h1 className="text-5xl font-bold mb-4">Interview Skills</h1>
+            <p className="text-lg leading-relaxed mb-6">
+              Build confidence, handle tough questions, and master behavioral interview techniques to land your dream job. Gain the edge in competitive recruitment processes.
             </p>
-
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition"
-            >
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>
-
-          {/* RIGHT IMAGE */}
           <div className="md:w-1/2 relative h-64">
-            <Image
-              src="/images/service-talent-sourcing.png"
-              alt="Interview Skills"
-              fill
-              className="object-contain"
-            />
+            <Image src="/images/service-talent-sourcing.png" alt="Interview Skills" fill className="object-contain" />
           </div>
-
         </div>
       </section>
+
+      {/* BACK BUTTON (OVERLAY) */}
+      <div className="absolute top-4 left-4 z-20">
+        <Link
+          href="/courses/Softskills"
+          className="inline-flex items-center text-sm font-semibold text-white bg-red-700 px-4 py-2 rounded-lg hover:bg-red-800 transition shadow-md"
+        >
+          <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Soft Skills Courses
+        </Link>
+      </div>
 
       {/* ✅ CURRICULUM */}
       <section className="py-20">

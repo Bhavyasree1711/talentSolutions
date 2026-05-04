@@ -30,7 +30,7 @@ export default function AwsIotPage() {
               Connect, manage, and scale IoT devices securely using AWS IoT Core, edge services, and analytics. Learn to build and deploy IoT solutions with confidence.
             </p>
             <Link
-              href="/contact"
+              href="/#contact"
               className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg"
             >
               Enroll Now

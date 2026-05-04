@@ -32,7 +32,7 @@ export default function AzureDevOpsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Learn modern DevOps practices including CI/CD, automation, containers, and deployment pipelines using Microsoft Azure DevOps tools.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

@@ -49,7 +49,7 @@ const coursesData: Record<string, any> = {
     category: "Cloud & DevOps",
     description:
       "Master CI/CD pipelines, Docker, Kubernetes and automation tools.",
-    image: "/images/aws-devops.png",
+    image: "/images/aws-devops-blue.png",
     duration: "6 Weeks",
     format: "Live + Classroom",
 

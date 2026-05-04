@@ -29,7 +29,7 @@ export default function MachineLearningPage() {
             <p className="text-lg mb-6 leading-relaxed">
               Learn ML algorithms, model building, evaluation, and deployment using real datasets. Gain hands-on experience to build intelligent systems.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

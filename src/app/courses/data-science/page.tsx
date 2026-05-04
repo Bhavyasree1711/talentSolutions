@@ -29,7 +29,7 @@ export default function DataSciencePage() {
             <p className="text-lg mb-6 leading-relaxed">
               Learn data analysis, visualization, statistics, and machine learning for real-world insights. Extract actionable knowledge from complex datasets.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

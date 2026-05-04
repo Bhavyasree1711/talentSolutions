@@ -15,7 +15,7 @@ const awsCourses = [
     id: 'aws-devops',
     title: 'AWS DevOps Training',
     description: 'Master CI/CD pipelines, automation, and infrastructure as code using AWS native developer tools.',
-    image: '/images/aws-devops.png',
+    image: '/images/aws-devops-blue.png',
     icon: Server, // Replace with actual icon import
   },
   {
