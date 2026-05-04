@@ -16,12 +16,12 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { label: 'HOME', href: '/#hero' },
-    { label: 'ABOUT', href: '/#about' },
-    { label: 'SOLUTIONS', href: '/#talents' },
-    { label: 'CLIENTS', href: '/#clients' },
-    { label: 'TRAINING', href: '/#training' },
-    { label: 'CONTACT', href: '/#contact' },
+    { label: 'HOME', href: '#hero' },
+    { label: 'ABOUT', href: '#about' },
+    { label: 'SOLUTIONS', href: '#talents' },
+    { label: 'CLIENTS', href: '#clients' },
+    { label: 'TRAINING', href: '#training' },
+    { label: 'CONTACT', href: '#contact' },
   ];
 
   return (

@@ -98,6 +98,18 @@ export default function TestimonialsSection() {
   }, [next]);
 
   return (
+    <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+        `
+      }} />
     <section id="clients" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -115,33 +127,27 @@ export default function TestimonialsSection() {
           </p>
         </ScrollReveal>
 
-        {/* Client Companies Grid */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {clientCompanies.map((company, index) => (
-              <ScrollReveal key={company.name} direction="up" delay={index * 150}>
-                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-lg p-6 border-2 border-gray-200 hover:border-red-300 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full flex flex-col items-center text-center">
-                  {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-t-lg" />
-
-                  {/* Company Icon */}
-                  <div className="relative mb-6 h-24 w-24 overflow-hidden rounded-lg bg-white border border-gray-200 shadow-sm group-hover:scale-110 transition-transform duration-300">
+        {/* Client Companies Marquee */}
+        <div className="mb-20 overflow-hidden">
+          <div className="relative">
+            <div className="flex animate-marquee space-x-8">
+              {[...clientCompanies, ...clientCompanies].map((company, index) => (
+                <div key={`${company.name}-${index}`} className="flex-shrink-0 w-64 bg-white rounded-lg border-2 border-red-500 shadow-lg hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center justify-center">
+                  <div className="relative w-40 h-24 mb-4">
                     <Image
                       src={company.logo}
                       alt={`${company.name} logo`}
                       fill
-                      sizes="(min-width: 768px) 96px, 96px"
-                      className="object-contain p-2"
+                      sizes="160px"
+                      className="object-contain"
                     />
                   </div>
-
-                  {/* Company Name */}
-                  <h3 className="text-xl font-bold mb-2 leading-snug" style={{ color: '#E63946' }}>
+                  <h3 className="text-base font-bold text-center text-gray-800 leading-tight">
                     {company.name}
                   </h3>
                 </div>
-              </ScrollReveal>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
@@ -179,7 +185,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
             </div>
-            <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-50 hover:text-red-700 transition-all duration-300 hover:shadow-xl" aria-label="Previous">
+            <button onClick={prev} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-18 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-50 hover:text-red-700 transition-all duration-300 hover:shadow-xl" aria-label="Previous">
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-50 hover:text-red-700 transition-all duration-300 hover:shadow-xl" aria-label="Next">
@@ -212,5 +218,6 @@ export default function TestimonialsSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }

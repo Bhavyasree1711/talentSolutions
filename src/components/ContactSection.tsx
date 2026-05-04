@@ -46,13 +46,13 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 mb-1">Phone</p>
-                  <a href="tel:+919247090111" className="text-gray-600 hover:text-red-700 transition-colors">
-                    +91 9247090111
+                  <a href="tel:+919247030111" className="text-gray-600 hover:text-red-700 transition-colors">
+                    +91 9247030111
                   </a>
                   <br />
                   
-                  <a href="tel:+916364512292" className="text-gray-600 hover:text-red-700 transition-colors">
-                    +91 6364512292
+                  <a href="tel:+917829121232" className="text-gray-600 hover:text-red-700 transition-colors">
+                    +91 7829121232
                   </a>
                   
                   
@@ -81,12 +81,12 @@ export default function ContactSection() {
                 <div>
                   <p className="font-bold text-gray-900 mb-1">Address</p>
                   <p className="text-gray-600 text-sm mb-2">
-                    <strong>DMX TECH SERVICES PVT.LTD - BTM 1st Stage</strong><br />
-                    No. 3, Service Road, 17th Main Rd, 3rd Floor, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068
+                    <strong>DMX TALENT SOLUTIONS PVT.LTD</strong><br />
+                    10, 100 Feet Ring Rd, BTM 2nd Stage, 1st Floor, BTM Layout, Bengaluru, Karnataka 560076
+
+Near F2B Cakes
                   </p>
-                  <p className="text-gray-600 text-sm mb-2">
-                    <strong>Near KEB Office</strong>
-                  </p>
+                  
                   <p className="text-gray-600 text-sm mb-2">
                     <strong>Mon-Sat: 09:00-19:00</strong>
                   </p>

@@ -49,12 +49,12 @@ export default function Footer() {
             <h3 className="text-white font-bold text-sm uppercase mb-5">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { label: 'Home', href: '/#hero' },
-                { label: 'About Us', href: '/#about' },
-                { label: 'Solutions', href: '/#talents' },
-                { label: 'Training', href: '/#training' },
-                { label: 'Clients', href: '/#testimonials' },
-                { label: 'Contact', href: '/#contact' },
+                { label: 'Home', href: '#hero' },
+                { label: 'About Us', href: '#about' },
+                { label: 'Solutions', href: '#talents' },
+                { label: 'Training', href: '#training' },
+                { label: 'Clients', href: '#clients' },
+                { label: 'Contact', href: '#contact' },
               ].map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-sm text-gray-400 hover:text-red-400 transition-colors">
@@ -87,14 +87,12 @@ export default function Footer() {
               <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm text-gray-400 mb-1 font-semibold">
-                  DMX TECH SERVICES PVT.LTD - BTM 1st Stage
+                  DMX TALENT SOLUTIONS PVT.LTD
                 </p>
                 <p className="text-sm text-gray-400 mb-1">
-                  No. 3, Service Road, 17th Main Rd, 3rd Floor, near KEB Office, Aicobo Nagar, 1st Stage, BTM Layout, Bengaluru, Karnataka 560068
+                  10, 100 Feet Ring Rd, BTM 2nd Stage, 1st Floor, BTM Layout, Bengaluru, Karnataka 560076 Near F2B Cakes
                 </p>
-                <p className="text-sm text-gray-400 mb-1 font-semibold">
-                  Near KEB Office
-                </p>
+                
                 
               </div>
             </div>
@@ -103,10 +101,10 @@ export default function Footer() {
               <Phone className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm text-gray-400 mb-1">
-                  <a href="tel:+919247090111" className="hover:text-red-400">+91 9247090111</a>
+                  <a href="tel:+919247030111" className="hover:text-red-400">+91 9247030111</a>
                 </p>
                 <p className="text-sm text-gray-400 mb-1">
-                  <a href="tel:+916364512292" className="hover:text-red-400">+91 6364512292</a>
+                  <a href="tel:+917829121232" className="hover:text-red-400">+91 7829121232</a>
                 </p>
               </div>
             </div>
