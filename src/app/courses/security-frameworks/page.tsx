@@ -31,7 +31,7 @@ export default function SecurityFrameworksPage() {
             <p className="text-lg leading-relaxed mb-6">
               Master industry-standard compliance and governance frameworks including ISO 27001, SOC 2, and NIST guidelines. Learn to implement and audit security controls effectively.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

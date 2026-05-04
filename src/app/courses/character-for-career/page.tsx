@@ -31,7 +31,7 @@ export default function CharacterForCareerPage() {
             <p className="text-lg leading-relaxed mb-6">
               Cultivate emotional intelligence, professional ethics, and a growth mindset to ensure long-term career success. Build the foundations of strong professional character.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

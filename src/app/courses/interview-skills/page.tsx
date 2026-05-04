@@ -31,7 +31,7 @@ export default function InterviewSkillsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Build confidence, handle tough questions, and master behavioral interview techniques to land your dream job. Gain the edge in competitive recruitment processes.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

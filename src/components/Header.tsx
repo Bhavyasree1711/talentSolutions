@@ -16,12 +16,12 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { label: 'HOME', href: '#hero' },
-    { label: 'ABOUT', href: '#about' },
-    { label: 'SOLUTIONS', href: '#talents' },
-    { label: 'CLIENTS', href: '#clients' },
-    { label: 'TRAINING', href: '#training' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: 'HOME', href: '/#hero' },
+    { label: 'ABOUT', href: '/#about' },
+    { label: 'SOLUTIONS', href: '/#talents' },
+    { label: 'CLIENTS', href: '/#clients' },
+    { label: 'TRAINING', href: '/#training' },
+    { label: 'CONTACT', href: '/#contact' },
   ];
 
   return (
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             
             <a
-              href="#contact"
+              href="/#contact"
               className="px-6 py-2.5 text-white font-bold text-xs rounded-lg transition-all duration-300 hover:shadow-lg tracking-wide uppercase flex items-center gap-1.5 hover:opacity-90"
               style={{ background: 'linear-gradient(135deg, #E63946 0%, #0B1F3A 100%)' }}
             >
@@ -89,7 +89,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               className="mt-3 w-full px-6 py-3 bg-red-700 text-white font-bold text-sm rounded-lg hover:bg-red-800 transition-colors text-center tracking-wide"
               onClick={() => setIsMenuOpen(false)}
             >

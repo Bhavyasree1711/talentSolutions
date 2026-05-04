@@ -31,7 +31,7 @@ export default function TeamingSkillsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Develop the essential collaboration and conflict-resolution qualities to drive projects and foster a positive work environment. Learn to build high-performing teams.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

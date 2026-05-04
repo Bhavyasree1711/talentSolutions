@@ -32,7 +32,7 @@ export default function PowerBIPage() {
             <p className="text-lg leading-relaxed mb-6">
               Transform raw data into powerful insights using Microsoft Power BI, dashboards, and advanced analytics. Learn to visualize and share business intelligence effectively.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

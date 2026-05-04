@@ -34,7 +34,7 @@ export default function AwsIaasPage() {
               Master the fundamentals of Amazon Web Services Infrastructure as a Service, including EC2, S3, VPC networking, and IAM security. Gain hands-on experience to design scalable and secure cloud solutions.
             </p>
             <Link
-              href="/contact"
+              href="/#contact"
               className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg"
             >
               Enroll Now

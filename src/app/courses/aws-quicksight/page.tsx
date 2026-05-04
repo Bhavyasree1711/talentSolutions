@@ -31,7 +31,7 @@ export default function AwsQuickSightPage() {
               Build interactive dashboards, perform advanced analytics, and visualize complex data leveraging AWS QuickSight. Gain insights to make data-driven decisions.
             </p>
             <Link
-              href="/contact"
+              href="/#contact"
               className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg"
             >
               Enroll Now

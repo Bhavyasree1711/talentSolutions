@@ -31,7 +31,7 @@ export default function CommunicationSkillsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Master verbal and written communication techniques to express ideas clearly and persuasively in corporate settings. Learn to lead and inspire through effective dialogue.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

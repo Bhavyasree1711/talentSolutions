@@ -29,7 +29,7 @@ export default function DataWarehousePage() {
             <p className="text-lg mb-6 leading-relaxed">
               Learn data warehousing, ETL pipelines, and cloud-based analytics systems. Master the architecture and design of enterprise data solutions.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

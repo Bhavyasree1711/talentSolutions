@@ -49,12 +49,12 @@ export default function Footer() {
             <h3 className="text-white font-bold text-sm uppercase mb-5">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { label: 'Home', href: '#hero' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Solutions', href: '#talents' },
-                { label: 'Training', href: '#training' },
-                { label: 'Clients', href: '#testimonials' },
-                { label: 'Contact', href: '#contact' },
+                { label: 'Home', href: '/#hero' },
+                { label: 'About Us', href: '/#about' },
+                { label: 'Solutions', href: '/#talents' },
+                { label: 'Training', href: '/#training' },
+                { label: 'Clients', href: '/#testimonials' },
+                { label: 'Contact', href: '/#contact' },
               ].map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-sm text-gray-400 hover:text-red-400 transition-colors">
@@ -71,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['Executive Search', 'IT Staffing', 'Contract Hiring', 'HR Consulting', 'Leadership Coaching', 'Talent Assessment'].map((s) => (
                 <li key={s}>
-                  <Link href="#services" className="text-sm text-gray-400 hover:text-red-400 transition-colors">
+                  <Link href="/#talents" className="text-sm text-gray-400 hover:text-red-400 transition-colors">
                     {s}
                   </Link>
                 </li>

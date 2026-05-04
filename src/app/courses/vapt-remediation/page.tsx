@@ -31,7 +31,7 @@ export default function VAPTRemediationPage() {
             <p className="text-lg leading-relaxed mb-6">
               Learn Vulnerability Assessment and Penetration Testing (VAPT) techniques and how to patch critical vulnerabilities effectively. Gain hands-on experience in securing modern applications.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

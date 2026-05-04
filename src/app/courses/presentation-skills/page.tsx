@@ -31,7 +31,7 @@ export default function PresentationSkillsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Learn how to structure presentations and use storytelling to engage stakeholders and deliver impactful pitches. Master the art of public speaking and audience connection.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

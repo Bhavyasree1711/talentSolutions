@@ -31,7 +31,7 @@ export default function SecureDevOpsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Integrate automated security checks, compliance operations, and threat modeling directly into your CI/CD pipelines. Build robust and secure software delivery systems.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

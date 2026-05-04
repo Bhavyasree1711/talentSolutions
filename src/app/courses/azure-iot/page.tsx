@@ -32,7 +32,7 @@ export default function AzureIoTPage() {
             <p className="text-lg leading-relaxed mb-6">
               Learn how to build scalable IoT solutions using Azure IoT Hub, edge computing, and real-time analytics. Master the integration of IoT devices with cloud services.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>

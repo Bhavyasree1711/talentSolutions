@@ -33,7 +33,7 @@ export default function AwsDevOpsPage() {
               Master CI/CD pipelines, automation, and infrastructure as code using AWS native developer tools. Learn modern DevOps practices to streamline your development and deployment processes.
             </p>
             <Link
-              href="/contact"
+              href="/#contact"
               className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition"
             >
               Enroll Now

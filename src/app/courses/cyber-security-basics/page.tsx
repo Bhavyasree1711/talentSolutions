@@ -31,7 +31,7 @@ export default function CyberSecurityBasicsPage() {
             <p className="text-lg leading-relaxed mb-6">
               Build a strong foundation in cyber security principles, threat analysis, and fundamental defensive strategies to protect digital assets.
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
+            <Link href="/#contact" className="px-6 py-3 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-800 transition shadow-lg">
               Enroll Now
             </Link>
           </div>
