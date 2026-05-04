@@ -50,13 +50,13 @@ export default function ContactSection() {
                     +91 9247030111
                   </a>
                   <br />
-                  
-                  <a href="tel:+917829121232" className="text-gray-600 hover:text-red-700 transition-colors">
-                    +91 7829121232
+
+                  <a href="tel:+916364512292" className="text-gray-600 hover:text-red-700 transition-colors">
+                    +91 6364512292
                   </a>
-                  
-                  
-                 
+
+
+
                 </div>
               </div>
 
@@ -84,9 +84,9 @@ export default function ContactSection() {
                     <strong>DMX TALENT SOLUTIONS PVT.LTD</strong><br />
                     10, 100 Feet Ring Rd, BTM 2nd Stage, 1st Floor, BTM Layout, Bengaluru, Karnataka 560076
 
-Near F2B Cakes
+                    Near F2B Cakes
                   </p>
-                  
+
                   <p className="text-gray-600 text-sm mb-2">
                     <strong>Mon-Sat: 09:00-19:00</strong>
                   </p>
@@ -144,8 +144,24 @@ Near F2B Cakes
             </div>
           </ScrollReveal>
 
-          {/* Contact Form */}
-          <ScrollReveal direction="right" className="lg:col-span-2">
+          {/* Contact Area (Map + Form) */}
+          <ScrollReveal direction="right" className="lg:col-span-2 flex flex-col gap-8">
+
+            {/* Google Map (No API Key) */}
+            <div className="w-full h-96 rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white p-2">
+              <iframe
+                title="DMX Talent Solutions Location"
+                src="https://maps.google.com/maps?q=12.9167445,77.6108699&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, borderRadius: '0.75rem' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-10">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
