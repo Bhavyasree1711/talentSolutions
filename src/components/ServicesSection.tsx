@@ -50,10 +50,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="talents" className="py-20 lg:py-28 bg-white">
+    <section id="talents" className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
-        <ScrollReveal direction="up" className="text-center mb-16">
+        <ScrollReveal direction="up" className="text-center mb-8">
           <h1
             className="text-4xl sm:text-5xl font-bold mb-4"
             style={{ fontFamily: 'var(--font-outfit)', color: '#E63946' }}
@@ -66,7 +66,7 @@ export default function ServicesSection() {
         </ScrollReveal>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           
             
         </div>
