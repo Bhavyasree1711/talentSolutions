@@ -92,7 +92,7 @@ export default function SoftSkillsCategoryPage() {
 function CourseCard({ course }: { course: any }) {
   const Icon = course.icon;
   return (
-    <Link href={`/course/${course.id}`} className="block group h-full">
+    <Link href={`/courses/${course.id}`} className="block group h-full">
       <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
         {/* Card Image */}
         <div className="relative h-48 w-full bg-gray-100 overflow-hidden">
