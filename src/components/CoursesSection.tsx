@@ -33,6 +33,20 @@ const courseCategories = [
     image: '/images/Softskills.png',
     borderColor: 'border-red-700',
   },
+  {
+    title: 'Data Center Infrastructure Engineer',
+    slug: 'data-center-infrastructure-engineer',
+    description: 'Master data center infrastructure, server management, storage technologies, and data protection strategies.',
+    image: '/images/dataceneter.png', // Using cloud image as placeholder
+    borderColor: 'border-red-600',
+  },
+  {
+    title: 'AWS Cloud',
+    slug: 'aws-cloud',
+    description: 'Master AWS cloud services, DevOps practices, containerization, and infrastructure automation for cloud-native applications.',
+    image: '/images/aws.png',
+    borderColor: 'border-blue-600',
+  },
 ];
 
 export default function CoursesSection() {

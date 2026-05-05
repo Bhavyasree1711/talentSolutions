@@ -12,11 +12,54 @@ export default function AwsIotPage() {
   };
 
   const curriculum = [
-    "Building IoT solutions with AWS IoT Core",
-    "Managing and scaling IoT devices securely",
-    "Analyzing IoT data with AWS analytics tools",
-    "Integrating IoT with other AWS services",
-    "Best practices for IoT security and scalability",
+    {
+      title: "IoT Fundamentals & AWS IoT Core",
+      topics: [
+        "Introduction to IoT: Components & AWS Architecture",
+        "AWS IoT Core: Message Broker & Device Gateway",
+        "Understanding MQTT Protocol & Communication Patterns"
+      ]
+    },
+    {
+      title: "Device Management & Registry",
+      topics: [
+        "Registering Things & Managing Device Identities",
+        "Device Shadows: Storing State for Offline Connectivity",
+        "IoT Jobs: Remote Firmware Updates & Fleet Actions"
+      ]
+    },
+    {
+      title: "IoT Rules Engine & Action Integration",
+      topics: [
+        "Writing SQL-like IoT Rules for Data Routing",
+        "Integrating with Lambda, S3, RDS, and DynamoDB",
+        "Processing Stream Data with Kinesis & SNS/SQS"
+      ]
+    },
+    {
+      title: "IoT Security & Certificates",
+      topics: [
+        "X.509 Certificate Management & Activation",
+        "IoT Policies: Fine-grained Access Control for Devices",
+        "Device Defender: Monitoring & Audit for Security"
+      ]
+    },
+    {
+      title: "Edge Computing with AWS IoT Greengrass",
+      topics: [
+        "Introduction to Greengrass: Local Compute & ML",
+        "Deploying Lambda Functions to the Edge",
+        "Greengrass Stream Manager & Local Resource Access"
+      ]
+    },
+    {
+      title: "IoT Analytics & Visualizations",
+      topics: [
+        "Batch & Stream Processing with IoT Analytics",
+        "Time Series Data Modeling & Data Store Management",
+        "Visualizing Sensor Data with QuickSight"
+      ]
+    }
   ];
 
   return (
@@ -69,21 +112,42 @@ export default function AwsIotPage() {
           </p>
           <div className="space-y-4">
             {curriculum.map((item, index) => (
-              <div key={index} className="border rounded-lg overflow-hidden">
+              <div key={index} className="border rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
+                {/* HEADER */}
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full text-left px-6 py-4 bg-white text-[#0B1F3A] font-semibold hover:bg-gray-100 focus:outline-none flex justify-between items-center"
+                  className="w-full text-left px-6 py-4 bg-white text-[#0B1F3A] font-bold hover:bg-gray-50 flex justify-between items-center transition-colors focus:outline-none"
                 >
-                  {item}
-                  <span className="ml-2">
-                    {openIndex === index ? "-" : "+"}
+                  <span className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-xs font-bold">
+                      {index + 1}
+                    </span>
+                    {item.title}
+                  </span>
+                  <span className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                    <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </span>
                 </button>
-                {openIndex === index && (
-                  <div className="px-6 py-4 bg-gray-50 text-gray-700">
-                    Detailed information about {item}.
+
+                {/* CONTENT */}
+                <div 
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 py-5 bg-gray-50 border-t border-gray-100">
+                    <ul className="space-y-3">
+                      {item.topics.map((topic, tIdx) => (
+                        <li key={tIdx} className="flex items-start gap-3 text-gray-600">
+                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0" />
+                          <span className="text-sm leading-relaxed">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
