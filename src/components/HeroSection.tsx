@@ -46,18 +46,16 @@ export default function HeroSection() {
 
               {/* Main Headline */}
               <h1
-                className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight mb-8 animate-fade-in-up"
-                style={{ fontFamily: 'var(--font-outfit), system-ui, sans-serif', color: '#1a2332', animationDelay: '0.2s' }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 animate-fade-in-up text-center lg:text-left"
+                style={{ fontFamily: 'var(--font-outfit), system-ui, sans-serif', color: '#0B1F3A', animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(255,255,255,0.6)' }}
               >
-                HR Solutions Company in Bangalore<br />
-                <span className="text-blue-600">IT Staffing Services India</span>
+                Partner in Modern<br />
+                <span className="text-blue-600 font-bold" style={{ textShadow: '1px 1px 2px rgba(255,255,255,0.6)' }}>HR Solutions.</span>
               </h1>
 
               {/* Description */}
               <p className="text-base lg:text-lg mb-10 leading-relaxed font-light animate-fade-in-up" style={{ color: '#4a5568', animationDelay: '0.3s' }}>
-                Leading corporate training company in Bangalore offering AWS cloud training with placement,
-                executive search, IT staffing, and comprehensive HR consulting services across India.
-                Transform your business with expert talent solutions.
+                We believe in thinking ahead and creating solutions that meet today's challenges and pave the way for future success.
               </p>
 
               {/* CTA Buttons */}
