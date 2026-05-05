@@ -8,7 +8,7 @@ const reasons = [
     title: 'Industry Expertise',
     description:
       'Deep knowledge across 50+ industries ensures we find candidates who truly understand your domain.',
-    image: '/images/industry experts.jpeg',
+    image: '/images/industry experts.png',
   },
   {
     title: 'Speed to Hire',
@@ -20,13 +20,13 @@ const reasons = [
     title: 'Quality Candidates',
     description:
       'Rigorous screening and assessment ensures only the best talent reaches your desk.',
-    image: '/images/quality app.jpeg',
+    image: '/images/quality app.png',
   },
   {
     title: 'Dedicated Support',
     description:
       'A dedicated account manager guides you through every step of the hiring journey.',
-    image: '/images/dedicated support.jpeg',
+    image: '/images/dedicated support.png',
   },
 ];
 
