@@ -88,7 +88,7 @@ export default function RootLayout({
         {children}
         <StickyWhatsAppButton />
         <StickyCallButton />
-        <QuickEnquiryPopup />
+        {/* <QuickEnquiryPopup /> */}
       </body>
     </html>
   );
