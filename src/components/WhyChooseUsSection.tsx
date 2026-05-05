@@ -20,7 +20,7 @@ const reasons = [
     title: 'Quality Candidates',
     description:
       'Rigorous screening and assessment ensures only the best talent reaches your desk.',
-    image: '/images/quality app.png',
+    image: '/images/qualityapp.png',
   },
   {
     title: 'Dedicated Support',

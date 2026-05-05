@@ -27,7 +27,7 @@ const clientCompanies = [
    {
     name: 'ALabs',
     industry: 'E-Learning Platform',
-    logo: '/images/Alabs.png',
+    logo: '/images/ALabs.png',
     projects: 'Training & Certification'
   },
   {
