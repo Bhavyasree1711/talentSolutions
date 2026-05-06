@@ -8,7 +8,7 @@ const reasons = [
     title: 'Industry Expertise',
     description:
       'Deep knowledge across 50+ industries ensures we find candidates who truly understand your domain.',
-    image: '/images/industry experts.png',
+    image: '/images/industryexperts.png',
   },
   {
     title: 'Speed to Hire',
@@ -26,7 +26,7 @@ const reasons = [
     title: 'Dedicated Support',
     description:
       'A dedicated account manager guides you through every step of the hiring journey.',
-    image: '/images/dedicated support.png',
+    image: '/images/dedicatedsupport.png',
   },
 ];
 
