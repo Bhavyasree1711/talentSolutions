@@ -7,68 +7,113 @@ import {
   ChevronDown,
   Clock,
   MonitorPlay,
-  Award
+  Award,
+  Briefcase
 } from "lucide-react";
+import TrainingFAQSection from "@/components/TrainingFAQSection";
 
 // ✅ COURSE DATA (add more courses here easily)
 const coursesData: Record<string, any> = {
-  "aws-iaas": {
-    title: "AWS IaaS Training",
+  "cloud-devops": {
+    title: "Cloud & DevOps Training",
     category: "Cloud & DevOps",
-    description:
-      "Learn AWS infrastructure services like EC2, S3, VPC, IAM with hands-on projects.",
-    image: "/images/aws.png",
-    duration: "4 Weeks",
+    description: "Master CI/CD pipelines, Docker, Kubernetes and automation tools.",
+    image: "/images/cloud.png",
+    duration: "12 Weeks",
     format: "Live + Classroom",
-
-    highlights: [
-      "EC2, S3, VPC hands-on training",
-      "Deploy real-world cloud projects",
-      "Learn IAM security best practices",
-      "Industry-ready cloud skills"
-    ],
-
+    highlights: ["CI/CD pipelines", "Docker & Kubernetes", "Automation tools", "DevOps best practices"],
+    projects: ["CI/CD Automation Pipeline", "Containerized Microservices"],
+    certifications: ["AWS Certified DevOps Engineer", "Certified Kubernetes Administrator"],
+    roles: ["DevOps Engineer", "Site Reliability Engineer (SRE)"],
     curriculum: [
-      {
-        title: "Module 1: AWS Basics",
-        items: ["Cloud Concepts", "AWS Regions", "IAM"]
-      },
-      {
-        title: "Module 2: Compute & Storage",
-        items: ["EC2", "S3", "EBS"]
-      },
-      {
-        title: "Module 3: Networking",
-        items: ["VPC", "Subnets", "Security Groups"]
-      }
+      { title: "Module 1: DevOps Fundamentals", items: ["CI/CD Principles", "Git & Version Control"] },
+      { title: "Module 2: Containerization", items: ["Docker Ecosystem", "Kubernetes Orchestration"] },
+      { title: "Module 3: Automation", items: ["Jenkins Pipelines", "Terraform Basics"] }
     ]
   },
-
-  "aws-devops": {
-    title: "AWS DevOps Training",
-    category: "Cloud & DevOps",
-    description:
-      "Master CI/CD pipelines, Docker, Kubernetes and automation tools.",
-    image: "/images/aws-devops-blue.png",
-    duration: "6 Weeks",
+  "ai-data-science": {
+    title: "AI & Data Science",
+    category: "AI & Data Science",
+    description: "Dive deep into Artificial Intelligence, Machine Learning algorithms, and advanced Data Analytics.",
+    image: "/images/aipowerded.png",
+    duration: "16 Weeks",
     format: "Live + Classroom",
-
-    highlights: [
-      "CI/CD pipelines",
-      "Docker & Kubernetes",
-      "Automation tools",
-      "DevOps best practices"
-    ],
-
+    highlights: ["Python Programming", "Machine Learning", "Deep Learning", "Data Visualization"],
+    projects: ["Predictive Analytics Model", "Image Recognition System"],
+    certifications: ["Certified Data Scientist", "TensorFlow Developer Certificate"],
+    roles: ["Data Scientist", "Machine Learning Engineer"],
     curriculum: [
-      {
-        title: "Module 1: DevOps Basics",
-        items: ["CI/CD", "Git"]
-      },
-      {
-        title: "Module 2: Containers",
-        items: ["Docker", "Kubernetes"]
-      }
+      { title: "Module 1: Python & Math Basics", items: ["Python Data Structures", "Statistics for ML"] },
+      { title: "Module 2: Machine Learning", items: ["Supervised Learning", "Unsupervised Learning"] },
+      { title: "Module 3: Deep Learning", items: ["Neural Networks", "NLP Basics"] }
+    ]
+  },
+  "cybersecurity": {
+    title: "Cybersecurity",
+    category: "Security",
+    description: "Learn to protect networks, secure applications, and master ethical hacking fundamentals.",
+    image: "/images/security.png",
+    duration: "10 Weeks",
+    format: "Live + Classroom",
+    highlights: ["Ethical Hacking", "Network Security", "Application Security", "Penetration Testing"],
+    projects: ["Vulnerability Assessment", "Secure Network Design"],
+    certifications: ["CompTIA Security+", "Certified Ethical Hacker (CEH)"],
+    roles: ["Security Analyst", "Penetration Tester"],
+    curriculum: [
+      { title: "Module 1: Security Fundamentals", items: ["Networking Basics", "Threat Landscapes"] },
+      { title: "Module 2: Ethical Hacking", items: ["Reconnaissance", "Exploitation Techniques"] },
+      { title: "Module 3: Defense", items: ["Firewalls", "Incident Response"] }
+    ]
+  },
+  "datacenter": {
+    title: "Datacenter",
+    category: "Infrastructure",
+    description: "Understand modern datacenter architecture, virtualization, and advanced server management.",
+    image: "/images/security.png",
+    duration: "8 Weeks",
+    format: "Classroom",
+    highlights: ["Server Hardware", "Virtualization", "Storage Area Networks (SAN)", "Disaster Recovery"],
+    projects: ["Datacenter Migration Plan", "High-Availability Cluster Setup"],
+    certifications: ["VMware Certified Professional", "Cisco CCNA Data Center"],
+    roles: ["Datacenter Engineer", "Systems Administrator"],
+    curriculum: [
+      { title: "Module 1: Datacenter Basics", items: ["Power & Cooling", "Rack Management"] },
+      { title: "Module 2: Virtualization", items: ["VMware vSphere", "Hyper-V"] },
+      { title: "Module 3: Storage & Network", items: ["SAN/NAS", "Datacenter Switching"] }
+    ]
+  },
+  "aws": {
+    title: "AWS Training",
+    category: "Cloud",
+    description: "Master AWS cloud services, cloud architecture, and infrastructure security.",
+    image: "/images/aws.png",
+    duration: "8 Weeks",
+    format: "Live + Classroom",
+    highlights: ["EC2 & S3", "VPC & Networking", "IAM Security", "Serverless Computing"],
+    projects: ["Scalable Web App Hosting", "Cloud Cost Optimization"],
+    certifications: ["AWS Solutions Architect - Associate"],
+    roles: ["Cloud Engineer", "AWS Architect"],
+    curriculum: [
+      { title: "Module 1: AWS Fundamentals", items: ["Global Infrastructure", "IAM"] },
+      { title: "Module 2: Compute & Storage", items: ["EC2 & Auto Scaling", "S3 & EBS"] },
+      { title: "Module 3: Networking", items: ["VPC Design", "Route 53"] }
+    ]
+  },
+  "soft-skills": {
+    title: "Soft Skill Trainings",
+    category: "Professional Development",
+    description: "Improve communication, leadership, teamwork, and critical interview skills for corporate success.",
+    image: "/images/aipowerded.png",
+    duration: "4 Weeks",
+    format: "Live Interactive Sessions",
+    highlights: ["Business Communication", "Leadership Traits", "Interview Preparation", "Team Collaboration"],
+    projects: ["Mock Interviews", "Group Discussions"],
+    certifications: ["DMX Soft Skills Certificate"],
+    roles: ["Corporate Professional"],
+    curriculum: [
+      { title: "Module 1: Communication", items: ["Verbal & Non-Verbal", "Email Etiquette"] },
+      { title: "Module 2: Interview Prep", items: ["Resume Building", "Mock HR Rounds"] },
+      { title: "Module 3: Leadership", items: ["Conflict Resolution", "Time Management"] }
     ]
   }
 };
@@ -84,7 +129,7 @@ export default function CourseDetailPage({
   if (!course) return notFound();
 
   // Exclude static routes from being handled dynamically
-  if (['aws-iaas', 'aws-devops', 'aws-quicksight', 'aws-iot', 'microsoft-azure', 'azure-devops', 'azure-iot', 'power-bi'].includes(params.slug)) {
+  if (['cloud-devops', 'ai-data-science', 'cybersecurity', 'datacenter', 'aws', 'soft-skills'].includes(params.slug) === false) {
     return notFound();
   }
 
@@ -95,7 +140,7 @@ export default function CourseDetailPage({
       <div className="bg-white border-b py-4 px-6 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto">
           <Link
-            href="/courses/cloud-devops"
+            href="/courses"
             className="flex items-center text-sm font-bold text-gray-600 hover:text-red-500"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -170,22 +215,51 @@ export default function CourseDetailPage({
                 {course.curriculum.map((section: any, i: number) => (
                   <details
                     key={i}
-                    className="bg-white p-4 rounded shadow"
+                    className="bg-white p-4 rounded shadow group"
                   >
-                    <summary className="cursor-pointer font-bold flex justify-between">
+                    <summary className="cursor-pointer font-bold flex justify-between items-center text-[#0B1F3A]">
                       {section.title}
-                      <ChevronDown />
+                      <ChevronDown className="group-open:rotate-180 transition-transform" />
                     </summary>
 
-                    <ul className="mt-3 ml-5 list-disc">
+                    <ul className="mt-3 ml-5 list-disc text-gray-600">
                       {section.items.map((item: string, j: number) => (
-                        <li key={j}>{item}</li>
+                        <li key={j} className="mb-1">{item}</li>
                       ))}
                     </ul>
                   </details>
                 ))}
               </div>
             </div>
+
+            {/* PROJECTS */}
+            {course.projects && (
+               <div>
+                  <h2 className="text-2xl font-bold mb-4">Real-Time Projects</h2>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                     {course.projects.map((project: string, i: number) => (
+                        <div key={i} className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 border-l-4 border-l-red-500">
+                           <p className="font-bold text-gray-800">{project}</p>
+                        </div>
+                     ))}
+                  </div>
+               </div>
+            )}
+
+            {/* CERTIFICATIONS */}
+            {course.certifications && (
+               <div>
+                  <h2 className="text-2xl font-bold mb-4">Certifications Covered</h2>
+                  <div className="flex flex-wrap gap-3">
+                     {course.certifications.map((cert: string, i: number) => (
+                        <div key={i} className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full font-semibold border border-blue-200 flex items-center gap-2">
+                           <Award className="w-4 h-4" />
+                           {cert}
+                        </div>
+                     ))}
+                  </div>
+               </div>
+            )}
 
           </div>
 
@@ -223,11 +297,21 @@ export default function CourseDetailPage({
                   </div>
                 </div>
 
+                {course.roles && (
+                   <div className="flex gap-3 items-center">
+                     <Briefcase className="text-red-500" />
+                     <div>
+                       <p className="text-xs text-gray-500">Target Roles</p>
+                       <p className="font-bold text-sm leading-tight">{course.roles.join(', ')}</p>
+                     </div>
+                   </div>
+                )}
+
               </div>
 
               <Link
                 href="/#contact"
-                className="block text-center mt-6 bg-blue-600 text-white py-3 rounded"
+                className="block text-center mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-bold transition-colors"
               >
                 Request Syllabus
               </Link>
@@ -237,6 +321,10 @@ export default function CourseDetailPage({
 
         </div>
       </section>
+
+      {/* 🔹 BOTTOM COMPONENTS */}
+      <TrainingFAQSection />
+      
     </div>
   );
 }

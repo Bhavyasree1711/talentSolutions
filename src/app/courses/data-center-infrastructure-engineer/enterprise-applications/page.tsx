@@ -10,11 +10,11 @@ export default function EnterpriseApplicationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center gap-4">
             <Link
-              href="/"
+              href="/courses/data-center-infrastructure-engineer"
               className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
-              Back to All Courses
+              Back to Data Center Courses
             </Link>
             <div className="h-6 w-px bg-gray-300" />
             <div>
@@ -55,7 +55,7 @@ export default function EnterpriseApplicationsPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/cloud.png"
+                src="/images/qualityapp.png"
                 alt="Enterprise Applications"
                 width={500}
                 height={400}

@@ -1,12 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import PageFAQSection from '@/components/PageFAQSection';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 
 export default function PermanentStaffingPage() {
   return (
     <div className="bg-white min-h-screen">
+      {/* Secondary Nav */}
+      <div className="bg-white border-b border-gray-200 py-4 hidden sm:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-6 overflow-x-auto scrollbar-hide">
+            <Link
+              href="/solutions"
+              className="flex items-center gap-2 text-gray-600 hover:text-[#E63946] border border-gray-200 hover:border-[#E63946] rounded-full px-4 py-1.5 text-sm font-medium whitespace-nowrap shrink-0 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Solutions
+            </Link>
+            <div className="flex items-center gap-4">
+              <Link href="/solutions/talent-acquisition" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Talent Acquisition</Link>
+              <Link href="/solutions/contract-staffing" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Contract Staffing</Link>
+              <div className="bg-[#0B1F3A] text-white px-5 py-1.5 rounded-full text-sm font-medium whitespace-nowrap flex items-center shrink-0 shadow-sm cursor-default">
+                Permanent Staffing
+              </div>
+              <Link href="/solutions/train-deploy" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Train & Deploy</Link>
+              <Link href="/solutions/skill-assessment" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Skill Assessment</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
+      <section className="relative min-h-[40vh] max-h-[400px] flex items-center py-20">
         {/* Background Image */}
         <Image
           src="/images/service-leadership.png"
@@ -15,26 +40,13 @@ export default function PermanentStaffingPage() {
           priority
           className="object-cover object-[80%_center] lg:object-right"
         />
-        {/* Refined Gradient: Solid dark on left for text readability, fully transparent on right for clear faces */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 from-10% via-[#0B1F3A]/70 via-45% to-transparent to-75%" />
+        {/* Darker Gradient Overlay for Text Visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
 
-        {/* Back Button Overlay */}
-        <div className="absolute top-24 lg:top-28 left-0 right-0 z-20">
-          <div className="max-w-6xl mx-auto px-6">
-            <Link
-              href="/#talents"
-              className="inline-flex items-center justify-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-red-700 transition-all shadow-sm group"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-              Back to Solutions
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white w-full mt-10 lg:mt-14">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white w-full mt-4 lg:mt-6">
           <div className="max-w-xl">
             <h1
-              className="text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+              className="text-4xl lg:text-5xl font-bold mb-4 leading-tight"
               style={{ fontFamily: 'var(--font-outfit)' }}
             >
               Permanent Staffing & Build-Operate-Transfer (BoT)
@@ -142,6 +154,34 @@ export default function PermanentStaffingPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <PageFAQSection 
+        title="Permanent Staffing FAQs"
+        description="Find answers to common questions about our permanent hiring and BoT solutions."
+        faqs={[
+          {
+            question: "What is your permanent staffing process?",
+            answer: "We start by deeply understanding your company culture and the specific role requirements. Then we source, screen, and interview candidates, presenting only a curated shortlist of top talent for your consideration."
+          },
+          {
+            question: "What happens if a permanent hire leaves shortly after joining?",
+            answer: "We offer replacement guarantees on all permanent placements. If a candidate leaves within the stipulated guarantee period, we will find a replacement at no extra cost."
+          },
+          {
+            question: "How long does it typically take to close a permanent role?",
+            answer: "While it varies depending on the role's complexity and seniority, our extensive talent network typically allows us to present qualified candidates within 1 to 2 weeks."
+          },
+          {
+            question: "What is the Build-Operate-Transfer (BoT) model?",
+            answer: "BoT is a hybrid model where we build a dedicated team for you, manage its operations to establish culture and processes, and eventually transfer complete ownership of the team and operations to your organization."
+          },
+          {
+            question: "How do you evaluate candidates for cultural fit?",
+            answer: "We go beyond technical skills by conducting in-depth behavioral interviews and utilizing personality assessments tailored to match your organizational values and team dynamics."
+          }
+        ]}
+      />
 
       {/* CTA SECTION */}
       <section className="py-20 relative overflow-hidden bg-white text-center">

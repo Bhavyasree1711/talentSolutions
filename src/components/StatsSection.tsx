@@ -35,9 +35,10 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 }
 
 const stats = [
-  { value: 94, suffix: '%', label: 'Retention Rate', description: 'Our placed candidates stay beyond one year' },
-  { value: 48, suffix: 'hrs', label: 'Response Time', description: 'From request to candidate delivery' },
-  { value: 85, suffix: '%', label: 'Technical Match Rate', description: 'Candidates meet requirements on first submission' },
+  { number: '500+', label: 'Successful Placements', delay: 0 },
+  { number: '100+', label: 'Hiring Partners', delay: 100 },
+  { number: '10+', label: 'Industries Served', delay: 200 },
+  { number: '95%', label: 'Client Satisfaction', delay: 300 },
 ];
 
 export default function StatsSection() {
@@ -52,15 +53,14 @@ export default function StatsSection() {
             Proven metrics that demonstrate our excellence in talent solutions
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <ScrollReveal key={stat.label} direction="up" delay={index * 150}>
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 text-center group h-full flex flex-col justify-between">
-                <p className="text-5xl sm:text-6xl font-extrabold mb-3 transition-colors" style={{ color: '#E63946' }}>
-                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+            <ScrollReveal key={stat.label} direction="up" delay={stat.delay}>
+              <div className="bg-white rounded-lg p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col justify-center items-center h-full">
+                <p className="text-4xl sm:text-5xl font-extrabold mb-2" style={{ color: '#E63946' }}>
+                  {stat.number}
                 </p>
-                <p className="text-xl font-bold text-gray-900 mb-2">{stat.label}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{stat.description}</p>
+                <p className="text-lg font-bold text-gray-800">{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}

@@ -50,7 +50,7 @@ export default function HeroSection() {
                 style={{ fontFamily: 'var(--font-outfit), system-ui, sans-serif', color: '#0B1F3A', animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(255,255,255,0.6)' }}
               >
                 Partner in Modern<br />
-                <span className="text-blue-600 font-bold" style={{ textShadow: '1px 1px 2px rgba(255,255,255,0.6)' }}>HR Solutions.</span>
+                <span style={{ color: '#0B1F3A', textShadow: '1px 1px 2px rgba(255,255,255,0.6)' }}>HR Solutions.</span>
               </h1>
 
               {/* Description */}
@@ -70,29 +70,10 @@ export default function HeroSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </a>
-                <a
-                  href="tel:+919247030111"
-                  className="inline-flex items-center gap-3 px-8 py-4 border-2 border-blue-600 text-blue-600 font-bold text-sm rounded-md transition-all duration-300 hover:bg-blue-600 hover:text-white tracking-wide uppercase"
-                >
-                  Call +91 92470 30111
-                </a>
+
               </div>
 
-              {/* Contact Information */}
-              <div className="text-sm font-semibold tracking-wide animate-fade-in-up flex flex-col gap-2" style={{ color: '#2d3748', animationDelay: '0.5s' }}>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span>+91 92470 30111 | +91 78291 21232</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span>s.siddeswara@dmxorg.com</span>
-                </div>
-              </div>
+
             </div>
 
             {/* Right Content - Empty for image background */}

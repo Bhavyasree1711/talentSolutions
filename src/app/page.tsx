@@ -1,35 +1,51 @@
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import StatsSection from '@/components/StatsSection';
-import ServicesSection from '@/components/ServicesSection';
-import RecruitmentMethodologiesSection from '@/components/RecruitmentMethodologiesSection';
+import WeAreDmxSection from '@/components/WeAreDmxSection';
+import CoreValuesSection from '@/components/CoreValuesSection';
 import WhyChooseUsSection from '@/components/WhyChooseUsSection';
-
-import TrainingServicesSection from '@/components/TrainingServicesSection';
-import CoursesSection from '@/components/CoursesSection';
+import HomeSolutionsSection from '@/components/HomeSolutionsSection';
+import LeadershipSection from '@/components/LeadershipSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import CTASection from '@/components/CTASection';
-import ContactSection from '@/components/ContactSection';
+import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  title: 'DMX Talent Solutions | Premier HR & IT Training Company',
+  description: 'DMX Talent Solutions provides top-tier HR consulting, executive search, IT staffing, and comprehensive software training programs globally.',
+  keywords: 'DMX Talent Solutions, HR Solutions, Executive Search, IT Staffing, Software Training, Cloud Training',
+};
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <HeroSection />
-      <AboutSection />
-      <StatsSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <RecruitmentMethodologiesSection />
-       <TrainingServicesSection />
-      <CoursesSection />
       
+      {/* 1. Hero Section */}
+      <HeroSection />
+      
+      {/* 2. We Are DMX (Oval Card + Image) */}
+      <WeAreDmxSection />
+      
+      {/* 3. Core Values */}
+      <CoreValuesSection />
+      
+      {/* 4. Why Trust Us */}
+      <WhyChooseUsSection />
 
-      <TestimonialsSection />
-      <CTASection />
-      <ContactSection />
+      {/* 5. What We Provide / You Will Achieve (Brief Cards -> /solutions) */}
+      <HomeSolutionsSection />
+
+      {/* 6. Leadership */}
+      <LeadershipSection />
+
+      {/* 7 & 8. Clients & Testimonials (TestimonialsSection contains both) */}
+      <TestimonialsSection /> 
+      
+      {/* 9. FAQs */}
+      <FAQSection />
+      
+      {/* 10. Footer */}
       <Footer />
     </div>
   );

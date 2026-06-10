@@ -1,12 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import PageFAQSection from '@/components/PageFAQSection';
 import { ArrowLeft, CheckCircle2, Target, BrainCircuit, LineChart } from 'lucide-react';
 
 export default function SkillAssessmentPage() {
   return (
     <div className="bg-white min-h-screen">
+      {/* Secondary Nav */}
+      <div className="bg-white border-b border-gray-200 py-4 hidden sm:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-6 overflow-x-auto scrollbar-hide">
+            <Link
+              href="/solutions"
+              className="flex items-center gap-2 text-gray-600 hover:text-[#E63946] border border-gray-200 hover:border-[#E63946] rounded-full px-4 py-1.5 text-sm font-medium whitespace-nowrap shrink-0 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Solutions
+            </Link>
+            <div className="flex items-center gap-4">
+              <Link href="/solutions/talent-acquisition" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Talent Acquisition</Link>
+              <Link href="/solutions/contract-staffing" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Contract Staffing</Link>
+              <Link href="/solutions/permanent-staffing" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Permanent Staffing</Link>
+              <Link href="/solutions/train-deploy" className="text-gray-500 text-sm font-medium whitespace-nowrap px-2 hover:text-[#0B1F3A] shrink-0 transition-colors">Train & Deploy</Link>
+              <div className="bg-[#0B1F3A] text-white px-5 py-1.5 rounded-full text-sm font-medium whitespace-nowrap flex items-center shrink-0 shadow-sm cursor-default">
+                Skill Assessment
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
+      <section className="relative min-h-[40vh] max-h-[400px] flex items-center py-20">
         {/* Background Image */}
         <Image
           src="/images/skillassess.png"
@@ -15,26 +40,13 @@ export default function SkillAssessmentPage() {
           priority
           className="object-cover object-[80%_center] lg:object-right"
         />
-        {/* Refined Gradient: Solid dark on left for text readability, fully transparent on right for clear faces */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 from-10% via-[#0B1F3A]/70 via-45% to-transparent to-75%" />
+        {/* Darker Gradient Overlay for Text Visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
 
-        {/* Back Button Overlay */}
-        <div className="absolute top-24 lg:top-28 left-0 right-0 z-20">
-          <div className="max-w-6xl mx-auto px-6">
-            <Link
-              href="/#talents"
-              className="inline-flex items-center justify-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-md text-sm font-semibold hover:bg-white hover:text-red-700 transition-all shadow-sm group"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-              Back to Solutions
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white w-full mt-10 lg:mt-14">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white w-full mt-4 lg:mt-6">
           <div className="max-w-xl">
             <h1
-              className="text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+              className="text-4xl lg:text-5xl font-bold mb-4 leading-tight"
               style={{ fontFamily: 'var(--font-outfit)' }}
             >
               Skill Assessment Solutions
@@ -117,6 +129,34 @@ export default function SkillAssessmentPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION */}
+      <PageFAQSection 
+        title="Skill Assessment FAQs"
+        description="Find answers to common questions about our technical and behavioral assessment methodologies."
+        faqs={[
+          {
+            question: "What types of skill assessments do you offer?",
+            answer: "We provide comprehensive technical evaluations, coding challenges, behavioral tests, and cognitive assessments tailored to the specific roles you are hiring for."
+          },
+          {
+            question: "Can you customize assessments for our specific technology stack?",
+            answer: "Yes, we can design custom assessment frameworks and practical assignments that precisely mirror your organization's unique tools, multi-cloud architectures, and workflows."
+          },
+          {
+            question: "How do your assessments prevent candidate cheating?",
+            answer: "Our assessment platforms employ advanced proctoring mechanisms, including browser locking, webcam monitoring, and plagiarism detection, to ensure the integrity of the evaluation process."
+          },
+          {
+            question: "How do the assessment results help in hiring decisions?",
+            answer: "You receive detailed, data-driven reports highlighting candidates' strengths, weaknesses, and overall suitability, allowing your technical panels to make unbiased and informed hiring decisions quickly."
+          },
+          {
+            question: "Can soft skills be accurately assessed?",
+            answer: "Yes, we use scientifically-backed behavioral assessments and structured situational interviews to gauge critical soft skills like leadership potential, adaptability, and problem-solving abilities."
+          }
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-16 text-center">
