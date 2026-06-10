@@ -10,12 +10,14 @@ export default function DataCentreCoreITInfrastructurePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center gap-4">
             <Link
-              href="/courses/data-center-infrastructure-engineer"
-              className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              Back to Data Center Courses
-            </Link>
+          href="/courses\data-center-infrastructure-engineer"
+          className="inline-flex items-center text-sm font-semibold text-white bg-red-700 px-4 py-2 rounded-lg hover:bg-red-800 transition shadow-md"
+        >
+          <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Data Center Courses
+        </Link>
             <div className="h-6 w-px bg-gray-300" />
             <div>
               <h1 className="text-2xl font-bold text-[#0B1F3A]">Data Centre / Core IT Infrastructure</h1>
@@ -55,7 +57,11 @@ export default function DataCentreCoreITInfrastructurePage() {
             </div>
             <div className="relative">
               <Image
+<<<<<<< HEAD
                 src="/images/dataceneter.png"
+=======
+                src="/images/cloud.png"
+>>>>>>> 0f440f691ae7ed149e7d5cfa6ae667482408a022
                 alt="Data Center Infrastructure"
                 width={500}
                 height={400}

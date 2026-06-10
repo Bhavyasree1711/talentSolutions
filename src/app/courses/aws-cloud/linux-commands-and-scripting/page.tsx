@@ -14,7 +14,7 @@ export default function LinuxCommandsAndScriptingPage() {
               className="flex items-center gap-2 text-gray-600 hover:text-blue-700 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
-              Back to Cloud Courses
+              Back to AWS Cloud Courses
             </Link>
             <div className="h-6 w-px bg-gray-300" />
             <div>

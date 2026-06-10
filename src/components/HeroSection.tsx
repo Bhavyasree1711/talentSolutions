@@ -40,8 +40,8 @@ export default function HeroSection() {
             <div className="flex flex-col justify-center py-12 lg:py-0 max-w-xl">
               {/* Tagline */}
               <div className="mb-8 flex items-center gap-2 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                
-                
+
+
               </div>
 
               {/* Main Headline */}
@@ -85,4 +85,3 @@ export default function HeroSection() {
   );
 }
 
-     

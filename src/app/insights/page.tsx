@@ -181,11 +181,11 @@ export default function InsightsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center gap-4">
             <Link
-              href="/"
+              href="/courses"
               className="flex items-center gap-2 text-gray-600 hover:text-blue-700 transition-colors"
             >
               <ArrowRight className="w-5 h-5 rotate-180" />
-              Back to Home
+              Back to All Courses
             </Link>
             <div className="h-6 w-px bg-gray-300" />
             <div>
