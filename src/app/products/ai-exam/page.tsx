@@ -2,75 +2,192 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductNav from '@/components/ProductNav';
+import ProductFAQSection from '@/components/ProductFAQSection';
+import ProductTestimonialsSection from '@/components/ProductTestimonialsSection';
 import { 
-  ArrowRight, ShieldCheck, FileText, BarChart3, Globe, Scan, 
-  CheckCircle, Database, Server, School, Building2, Users
+  ShieldCheck, BarChart3, Server, Lock, Settings, Users,
+  UploadCloud, Zap, TrendingUp, Globe, Database, Shield
 } from 'lucide-react';
 
 export default function AISmartExamPage() {
+  const testimonials = [
+    {
+      quote: "AI-SmartExam has fundamentally changed how we evaluate students across our 12 campuses. The automated scoring for subjective answers is surprisingly nuanced and accurate, saving us thousands of faculty hours.",
+      name: "Dr. Robert Singh",
+      role: "Vice Chancellor",
+      company: "National Technical University"
+    },
+    {
+      quote: "The built-in proctoring and plagiarism detection give us total confidence in administering remote exams. We've completely eliminated the logistical nightmare of offline testing centers.",
+      name: "Anita Desai",
+      role: "Director of Examinations",
+      company: "Excel Board of Education"
+    },
+    {
+      quote: "Deep analytics on student performance allows us to identify learning gaps at the cohort level instantly. It's not just an evaluation tool; it's a critical academic feedback loop.",
+      name: "Mark O'Connor",
+      role: "Chief Academic Officer",
+      company: "Pathfinder EdTech"
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "Can AI-SmartExam grade subjective and essay-type answers?",
+      answer: "Yes, our proprietary Natural Language Processing (NLP) models are trained to evaluate subjective responses, essays, and long-form text based on predefined rubrics and key conceptual parameters provided by the examiner."
+    },
+    {
+      question: "How does the remote proctoring feature work?",
+      answer: "We utilize multi-modal AI proctoring that tracks eye movement, facial recognition, ambient noise, and multiple-person detection. It works silently in the background and flags suspicious events for manual review."
+    },
+    {
+      question: "Does the system support handwritten answer sheets?",
+      answer: "Absolutely. Our advanced intelligent character recognition (ICR) pipeline can scan, digitize, and grade handwritten answers with extremely high accuracy across multiple languages."
+    },
+    {
+      question: "Is AI-SmartExam compliant with data privacy regulations like GDPR and FERPA?",
+      answer: "Yes, data security is paramount. The platform is fully compliant with global data protection standards (GDPR, FERPA), utilizing end-to-end encryption and anonymized grading protocols."
+    },
+    {
+      question: "How quickly can results be published?",
+      answer: "For objective exams, results and detailed analytical reports are generated instantaneously upon submission. For subjective assessments, automated grading can process thousands of scripts in mere minutes."
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <ProductNav />
       
-      <main className="flex-grow pt-4 pb-16">
+      <main className="flex-grow">
         {/* HERO SECTION */}
-        <section className="relative bg-[#0B1F3A] text-white py-20 lg:py-28 overflow-hidden">
-          <div className="absolute inset-0 z-0 opacity-20">
-            <img 
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80" 
-              alt="Exam Evaluation Background" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A] via-[#0B1F3A]/90 to-transparent"></div>
+        <section className="w-full bg-[#1e3a5f] text-white py-8 md:py-12 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-2xl md:text-4xl font-bold mb-4">
+              AI-Based Smart Exam Evaluation Tool
+            </h1>
+            <h2 className="text-base md:text-lg font-medium mb-2">
+              Transform Your Evaluation Process
+            </h2>
+            <p className="text-sm md:text-base text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Automated scoring, deep analytics, and proctoring in one complete platform.
+            </p>
+            <button className="px-8 py-2.5 bg-white text-[#1e3a5f] font-semibold rounded-full hover:bg-gray-100 transition-colors">
+              Request Demo
+            </button>
           </div>
-          
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                AI-Based Smart <span className="text-red-500">Exam Evaluation</span> Tool
-              </h1>
-              <p className="text-xl font-semibold text-gray-200 mb-4">Smart Exam Evaluation Made Simple. AI-Powered. Scalable. Accurate.</p>
-              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
-                A next-gen system that automates the entire exam evaluation cycle – from scanned sheet uploads to instant results & performance insights.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="/contact" 
-                  className="px-8 py-3.5 bg-red-700 hover:bg-red-600 text-white font-bold rounded-lg shadow-lg hover:shadow-red-700/20 transition-all flex items-center justify-center gap-2"
-                >
-                  Request Demo <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
+        </section>
+
+        {/* KEY FEATURES */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-[#1e3a5f]">Key Features</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: 'Effortless Uploads',
+                  desc: 'Scan & upload OMR sheets or option based answers. Question paper + answer key supported.',
+                  img: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=400&q=80',
+                  colorClass: 'text-red-500'
+                },
+                {
+                  title: 'Automated Evaluation',
+                  desc: 'AI engine matches answers with pre-uploaded keys. Instant scoring: per-question + total marks.',
+                  img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80',
+                  colorClass: 'text-blue-600'
+                },
+                {
+                  title: 'Smart Results Management',
+                  desc: 'Auto-update scores into a secure database. Track student progress in real time.',
+                  img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80',
+                  colorClass: 'text-red-500'
+                },
+                {
+                  title: 'Multi-Region Leaderboards',
+                  desc: 'Compare performance across regions, states, and nationwide. Enable healthy competition & benchmarking.',
+                  img: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=400&q=80',
+                  colorClass: 'text-blue-600'
+                }
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">
+                  <img src={item.img} alt={item.title} className="w-full h-40 object-cover" />
+                  <div className="p-6 flex flex-col items-start text-left">
+                    <h3 className={`text-sm font-bold mb-3 ${item.colorClass}`}>{item.title}</h3>
+                    <p className="text-gray-500 text-[11px] leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* FEATURES GRID */}
+        {/* PRODUCT OVERVIEW */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0B1F3A] mb-4">Key Features</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Transforming the traditional grading process into a fast, digital, and unbiased pipeline.
+              <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4">Product Overview</h2>
+              <p className="text-gray-500 max-w-3xl mx-auto text-sm leading-relaxed">
+                AI-SmartExam is a high-integrity online proctoring and automated exam evaluation system. It manages scanned physical answer sheet ingestion, matches digitized answers with dynamic rubrics, and handles large-scale grading.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'Effortless Uploads', desc: 'Scan & upload OMR sheets or option based answers. Question paper + answer key supported.', icon: Scan },
-                { title: 'Automated Evaluation', desc: 'AI engine matches answers with pre-uploaded keys. Instant scoring: per-question + total marks.', icon: CheckCircle },
-                { title: 'Smart Results Management', desc: 'Auto-update scores into a secure database. Track student progress in real time.', icon: Database },
-                { title: 'Multi-Region Leaderboards', desc: 'Compare performance across regions, states, and nationwide. Enable healthy competition & benchmarking.', icon: Globe },
-              ].map((feature, i) => (
-                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-red-100 transition-all group text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-red-50 text-red-700 flex items-center justify-center mb-6 mx-auto group-hover:bg-red-700 group-hover:text-white transition-colors">
-                    <feature.icon className="w-8 h-8" />
+                {
+                  title: 'Key Capabilities',
+                  desc: 'AI proctoring (gaze/face/noise detection), OCR digitizer for scanned handwriting, automated grading engine for subjective questions, and leaderboard generation.',
+                  icon: ShieldCheck,
+                  color: 'text-red-500',
+                  borderColor: 'border-red-500'
+                },
+                {
+                  title: 'Business Benefits',
+                  desc: 'Reduces grading turnaround times by 75%, eliminates human evaluators\' bias, protects exam integrity from academic misconduct, and provides granular school metrics.',
+                  icon: BarChart3,
+                  color: 'text-blue-500',
+                  borderColor: 'border-blue-500'
+                },
+                {
+                  title: 'Deployment & Integration',
+                  desc: 'Containerized deploy model (Docker/K8s) for massive concurrent scaling, integrating with Canvas, Blackboard, or internal student records.',
+                  icon: Server,
+                  color: 'text-red-500',
+                  borderColor: 'border-red-500'
+                },
+                {
+                  title: 'Security & Compliance',
+                  desc: 'GDPR and FERPA compliance, secure lock-down browser integrations, high-security candidate identity verification, and immutable log trails.',
+                  icon: Lock,
+                  color: 'text-blue-500',
+                  borderColor: 'border-blue-500'
+                },
+                {
+                  title: 'Implementation & Support',
+                  desc: 'On-boarding workshops for institutional admins, proctor training, custom rubric model tuning, and standby support during high-stakes exams.',
+                  icon: Settings,
+                  color: 'text-red-500',
+                  borderColor: 'border-red-500'
+                },
+                {
+                  title: 'Target Customers',
+                  desc: 'State education boards, universities, licensing testing bodies, corporate assessment partners, and professional certification providers.',
+                  icon: Users,
+                  color: 'text-blue-500',
+                  borderColor: 'border-blue-500'
+                }
+              ].map((card, i) => (
+                <div key={i} className={`bg-white p-8 rounded-2xl shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow border-t-2 border-x border-b border-x-gray-100 border-b-gray-100 ${card.borderColor}`}>
+                  <div className={`w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center`}>
+                    <card.icon className={`w-5 h-5 ${card.color}`} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#0B1F3A] mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
-                    {feature.desc}
+                  <h3 className="text-sm font-bold text-[#1e3a5f]">{card.title}</h3>
+                  <p className="text-gray-500 text-[11px] leading-relaxed">
+                    {card.desc}
                   </p>
                 </div>
               ))}
@@ -78,197 +195,94 @@ export default function AISmartExamPage() {
           </div>
         </section>
 
-        {/* TRANSFORM YOUR PROCESS */}
-        <section className="py-16 bg-white border-y border-gray-100">
+        {/* TRANSFORM YOUR EVALUATION PROCESS */}
+        <section className="py-20 bg-white border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0B1F3A] mb-4">Transform Your Evaluation Process</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-[#1e3a5f]">Transform Your Evaluation Process</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'Seamless Integration', icon: Server, desc: 'Works with existing OMR systems and question formats' },
-                { name: 'Lightning Fast', icon: BarChart3, desc: 'Process hundreds of answer sheets in minutes, not hours' },
-                { name: 'Advanced Analytics', icon: BarChart3, desc: 'Real-time performance tracking and detailed insights' },
-                { name: 'Multi-Region Support', icon: Globe, desc: 'Compare and benchmark performance across different regions' },
-                { name: 'Secure Database', icon: ShieldCheck, desc: 'Auto-updated scores with enterprise-grade security' },
-                { name: 'Competitive Insights', icon: Users, desc: 'Enable healthy competition with comprehensive leaderboards' }
+                { name: 'Seamless Integration', icon: UploadCloud, color: 'text-red-500', desc: 'Works with existing OMR systems and question formats' },
+                { name: 'Lightning Fast', icon: Zap, color: 'text-blue-500', desc: 'Process hundreds of answer sheets in minutes, not hours' },
+                { name: 'Advanced Analytics', icon: TrendingUp, color: 'text-red-500', desc: 'Real-time performance tracking and detailed insights' },
+                { name: 'Multi-Region Support', icon: Globe, color: 'text-blue-500', desc: 'Compare and benchmark performance across different regions' },
+                { name: 'Secure Database', icon: Database, color: 'text-red-500', desc: 'Auto-updated scores with enterprise-grade security' },
+                { name: 'Competitive Insights', icon: Shield, color: 'text-blue-500', desc: 'Enable healthy competition with comprehensive leaderboards' }
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center justify-center p-6 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6" />
+                <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow">
+                  <div className={`w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center`}>
+                    <item.icon className={`w-5 h-5 ${item.color}`} />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
-                  <p className="text-sm text-gray-500">{item.desc}</p>
+                  <h3 className="text-sm font-bold text-[#1e3a5f]">{item.name}</h3>
+                  <p className="text-gray-500 text-[11px] leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* OVERVIEW & SPECS */}
+        {/* WHY CHOOSE SECTION */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <h2 className="text-3xl font-bold text-[#0B1F3A] mb-8">Platform Overview & Specifications</h2>
-                
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-red-600"></div> Product Overview
-                    </h3>
-                    <p className="text-gray-600">
-                      AI-SmartExam is a high-integrity online proctoring and automated exam evaluation system. It manages scanned physical answer sheet ingestion, matches digitized answers with dynamic rubrics, and handles large-scale grading.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-red-600"></div> Key Capabilities
-                    </h3>
-                    <p className="text-gray-600">
-                      AI proctoring (gaze/face/noise detection), OCR digitizer for scanned handwriting, automated grading engine for subjective questions, and leaderboard generation.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-red-600"></div> Business Benefits
-                    </h3>
-                    <p className="text-gray-600">
-                      Reduces grading turnaround times by 75%, eliminates human evaluators' bias, protects exam integrity from academic misconduct, and provides granular school metrics.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0B1F3A] mb-2">Deployment & Integration</h3>
-                    <p className="text-gray-600 text-sm">
-                      Containerized deploy model (Docker/K8s) for massive concurrent scaling, integrating with Canvas, Blackboard, or internal student records.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0B1F3A] mb-2">Security & Compliance</h3>
-                    <p className="text-gray-600 text-sm">
-                      GDPR and FERPA compliance, secure lock-down browser integrations, high-security candidate identity verification, and immutable log trails.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0B1F3A] mb-2">Implementation & Support</h3>
-                    <p className="text-gray-600 text-sm">
-                      On-boarding workshops for institutional admins, proctor training, custom rubric model tuning, and standby support during high-stakes exams.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0B1F3A] mb-2">Target Customers</h3>
-                    <p className="text-gray-600 text-sm">
-                      State education boards, universities, licensing testing bodies, corporate assessment partners, and professional certification providers.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHY CHOOSE */}
-        <section className="py-20 bg-[#0B1F3A] text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Smart Exam Tool?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4">Why Choose Our Smart Exam Tool?</h2>
+              <p className="text-gray-500 max-w-3xl mx-auto text-sm leading-relaxed">
                 AI-SmartExam is not just a grading tool—it is a complete exam intelligence platform that eliminates manual evaluation, fraud, and bias at scale.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  title: 'Save Hours of Manual Correction',
-                  desc: 'Eliminate the burden of hand-checking thousands of answer sheets. AI-SmartExam processes entire batches in minutes with 99%+ accuracy—freeing educators to focus on teaching, not correcting.'
+                  title: 'Save Hours of Manual Work',
+                  desc: 'Eliminate the burden of hand-checking thousands of answer sheets. AI-SmartExam processes entire batches in minutes with 99%+ accuracy.',
+                  img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80'
                 },
                 {
                   title: 'AI-Powered Precision Grading',
-                  desc: 'Our deep-learning OCR and NLP grading engine evaluates both objective and subjective answers against dynamic rubrics—delivering unbiased, consistent, and ultra-accurate scores every single time.'
+                  desc: 'Evaluates both objective and subjective answers against dynamic rubrics—delivering unbiased, consistent scores every time.',
+                  img: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80'
                 },
                 {
                   title: 'Scale Across Institutions',
-                  desc: 'From a single classroom to a state-level examination board running 100,000+ concurrent assessments, AI-SmartExam\'s containerized cloud infrastructure scales instantly without performance degradation.'
+                  desc: 'From a single classroom to a state-level board running 100,000+ assessments, containerized cloud infrastructure scales instantly.',
+                  img: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80'
                 },
                 {
                   title: 'Deep Analytics & Leaderboards',
-                  desc: 'Gain granular insights into student performance at school, district, state, and national levels. Multi-region leaderboards spark healthy competition while pinpointing skill gaps that need targeted intervention.'
+                  desc: 'Gain granular insights at school, district, state, and national levels. Multi-region leaderboards spark healthy competition.',
+                  img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80'
                 }
               ].map((item, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-red-600 flex-shrink-0 flex items-center justify-center mt-1">
-                      <ShieldCheck className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                      <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
+                <div key={i} className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">
+                  <img src={item.img} alt={item.title} className="w-full h-40 object-cover" />
+                  <div className="p-6 text-center flex flex-col items-center">
+                    <h3 className="text-sm font-bold text-[#1e3a5f] mb-3">{item.title}</h3>
+                    <p className="text-gray-500 text-[11px] leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* FAQS */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0B1F3A] mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-600">
-                Find answers to common questions about our training programs and IT services. Ready to advance your career or transform your business? We're here to help.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {[
-                {
-                  q: 'How does AI-SmartExam prevent cheating during remote online assessments?',
-                  a: 'The platform integrates advanced AI proctoring that utilizes gaze tracking, facial recognition, and background noise detection, paired with a secure lock-down browser.'
-                },
-                { q: 'Can this platform handle high-stakes university or certification exams?', a: 'Yes. It was built specifically to secure and process high-stakes exams, using high-security candidate identity verification and immutable audit trails.' },
-                { q: 'Is the platform scalable enough for massive simultaneous testing?', a: 'Absolutely. We use a containerized deployment model (Docker/K8s) that automatically scales to handle hundreds of thousands of concurrent users.' },
-                { q: 'How does the automated grading system handle subjective or essay answers?', a: 'Our NLP engine evaluates written text against instructor-defined rubrics, looking for key concepts, semantic relevance, and structure rather than just exact word matches.' },
-                { q: 'Can corporate HR use this for technical or compliance testing?', a: 'Yes, it is highly adaptable for corporate assessment partners to conduct secure compliance, technical, or pre-employment testing.' },
-                { q: 'What kind of analytics and reporting are provided post-exam?', a: 'Administrators get granular insights into student performance at cohort, demographic, and regional levels, complete with multi-region leaderboards.' },
-                { q: 'Does the platform integrate with standard Learning Management Systems?', a: 'Yes, AI-SmartExam integrates seamlessly via LTI (Learning Tools Interoperability) with standard LMS platforms like Canvas, Moodle, and Blackboard for automated roster syncing and grade pushback.' }
-              ].map((faq, i) => (
-                <details key={i} className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
-                  <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-gray-900 hover:text-red-700 transition-colors">
-                    <span className="pr-6 font-semibold">{faq.q}</span>
-                    <span className="transition group-open:rotate-180">
-                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                    </span>
-                  </summary>
-                  <div className="text-gray-600 mt-3 group-open:animate-fadeIn p-6 pt-0 border-t border-gray-100">
-                    <p>{faq.a}</p>
-                  </div>
-                </details>
-              ))}
-            </div>
-
-            <div className="mt-12 text-center bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-bold text-[#0B1F3A] mb-2">Still have questions?</h3>
-              <p className="text-gray-600 mb-6">Can't find the answer you're looking for? Please chat to our friendly team.</p>
-              <a href="/contact" className="inline-block px-8 py-3 bg-red-700 hover:bg-red-800 text-white font-bold rounded-lg transition-colors">
-                Get in touch
+            <div className="mt-16 text-center">
+              <a href="/contact" className="inline-block px-8 py-3 bg-[#1e3a5f] text-white font-semibold rounded-full hover:bg-[#152c4a] transition-colors shadow-lg">
+                Contact Sales
               </a>
             </div>
           </div>
         </section>
+
+        {/* DYNAMIC TESTIMONIALS SECTION */}
+        <ProductTestimonialsSection testimonials={testimonials} />
+
+        {/* DYNAMIC FAQ SECTION */}
+        <ProductFAQSection faqs={faqs} />
 
       </main>
       <Footer />

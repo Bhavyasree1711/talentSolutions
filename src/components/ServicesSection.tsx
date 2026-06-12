@@ -81,7 +81,7 @@ export default function ServicesSection({ isTopSection = false }: ServicesSectio
             >
               <Link href={`/solutions/${service.slug}`} className="block h-full group">
   <div
-    className={`border-4 ${service.borderColor} rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-white h-full flex flex-col`}
+    className="bg-white rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.06)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
   >
     {/* Image */}
     <div className="relative h-48 overflow-hidden bg-gray-100">
