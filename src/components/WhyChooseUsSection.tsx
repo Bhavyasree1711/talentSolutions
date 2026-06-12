@@ -14,13 +14,13 @@ const reasons = [
     title: 'Speed to Hire',
     description:
       'Our streamlined processes deliver qualified shortlists within days, not weeks.',
-    image: '/images/speedtohire.png',
+    image: '/images/speed_hire_photo.png',
   },
   {
     title: 'Quality Candidates',
     description:
       'Rigorous screening and assessment ensures only the best talent reaches your desk.',
-    image: '/images/qualityapp.png',
+    image: '/images/quality_cands_photo.png',
   },
   {
     title: 'Dedicated Support',

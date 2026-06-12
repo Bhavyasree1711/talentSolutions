@@ -18,19 +18,7 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-white pt-20">
       <Header />
       
-      {/* Inner Page Hero */}
-      <div className="bg-[#0f1d33] py-16 text-center border-b border-gray-800">
-        <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight" style={{ fontFamily: 'var(--font-outfit)' }}>
-            Our Talent Solutions
-          </h1>
-          <p className="text-lg text-gray-400">
-            End-to-end recruitment and HR consulting services tailored for modern enterprises.
-          </p>
-        </div>
-      </div>
-
-      <ServicesSection />
+      <ServicesSection isTopSection={true} />
       <RecruitmentMethodologiesSection />
       <SolutionsTestimonialsSection />
       <SolutionsFAQSection />

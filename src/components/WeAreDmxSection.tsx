@@ -17,7 +17,7 @@ export default function WeAreDmxSection() {
               <span className="text-sm font-bold text-red-700 uppercase tracking-widest">About Our Company</span>
             </div>
             
-            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 leading-[1.15]" style={{ color: '#0B1F3A' }}>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 leading-[1.15]" style={{ color: '#0B1F3A' }}>
               We Are DMX Talent Solutions & Software IT Trainings
             </h2>
             

@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import TrainingHeroSection from '@/components/TrainingHeroSection';
+
 import TrainingJourneySection from '@/components/TrainingJourneySection';
+import TrainingWhyChooseSection from '@/components/TrainingWhyChooseSection';
 import CoursesSection from '@/components/CoursesSection';
 import PlacementAssistanceSection from '@/components/PlacementAssistanceSection';
 import ToolsTechnologiesSection from '@/components/ToolsTechnologiesSection';
@@ -20,9 +21,10 @@ export default function CoursesPage() {
     <div className="min-h-screen bg-white pt-20">
       <Header />
       
-      <TrainingHeroSection />
-      <CoursesSection />
+
+      <CoursesSection isTopSection={true} />
       <TrainingJourneySection />
+      <TrainingWhyChooseSection />
       <PlacementAssistanceSection />
       <ToolsTechnologiesSection />
       <TrainingFAQSection />

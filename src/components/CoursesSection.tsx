@@ -67,9 +67,13 @@ const courseCategories = [
   },
 ];
 
-export default function CoursesSection() {
+interface CoursesSectionProps {
+  isTopSection?: boolean;
+}
+
+export default function CoursesSection({ isTopSection = false }: CoursesSectionProps = {}) {
   return (
-    <section id="training-categories" className="py-20 lg:py-28 bg-gray-50 border-t border-gray-100">
+    <section id="training-categories" className={`${isTopSection ? 'pt-8 lg:pt-12 pb-20 lg:pb-28' : 'py-20 lg:py-28'} bg-gray-50 border-t border-gray-100`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

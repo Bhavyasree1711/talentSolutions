@@ -55,7 +55,7 @@ export default function EnterpriseApplicationsPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/qualityapp.png"
+                src="/images/quality_cands_photo.png"
                 alt="Enterprise Applications"
                 width={500}
                 height={400}

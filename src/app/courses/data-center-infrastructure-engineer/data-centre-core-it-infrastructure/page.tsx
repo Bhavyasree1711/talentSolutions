@@ -57,11 +57,7 @@ export default function DataCentreCoreITInfrastructurePage() {
             </div>
             <div className="relative">
               <Image
-<<<<<<< HEAD
                 src="/images/dataceneter.png"
-=======
-                src="/images/cloud.png"
->>>>>>> 0f440f691ae7ed149e7d5cfa6ae667482408a022
                 alt="Data Center Infrastructure"
                 width={500}
                 height={400}

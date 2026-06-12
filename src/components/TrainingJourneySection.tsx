@@ -1,53 +1,56 @@
 'use client';
 
-import { FileText, Users, Code, Award, Briefcase } from 'lucide-react';
+import { FileText, Users, Award, Briefcase, MessageSquare, Cloud } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const journeySteps = [
   {
-    title: 'Live Projects',
-    description: 'Work on real-time, industry-relevant applications with hands-on labs.',
-    duration: 'Weeks 1-8',
-    icon: Code,
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-50',
-    borderColor: 'border-blue-200'
-  },
-  {
-    title: 'Certification Preparation',
-    description: 'Targeted mock exams and study guides for global certifications (AWS, Azure).',
-    duration: 'Week 9',
-    icon: Award,
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-50',
-    borderColor: 'border-purple-200'
-  },
-  {
-    title: 'Resume Building',
-    description: 'Craft an ATS-friendly, technically sound resume highlighting your new skills.',
-    duration: 'Week 10',
+    title: 'Profile Building',
+    description: 'Build a compelling professional profile',
     icon: FileText,
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-orange-200'
-  },
-  {
-    title: 'Mock Interviews',
-    description: 'Technical and HR mock interviews with industry experts to build confidence.',
-    duration: 'Week 11',
-    icon: Users,
-    color: 'text-teal-600',
-    bgColor: 'bg-teal-50',
-    borderColor: 'border-teal-200'
-  },
-  {
-    title: 'Placement Assistance',
-    description: 'Direct interviews with our 50+ hiring partners and exclusive job boards.',
-    duration: 'Week 12+',
-    icon: Briefcase,
-    color: 'text-red-600',
+    color: 'text-red-700',
     bgColor: 'bg-red-50',
     borderColor: 'border-red-200'
+  },
+  {
+    title: 'Interview Preparation',
+    description: 'Master interview techniques and strategies',
+    icon: Users,
+    color: 'text-[#0B1F3A]',
+    bgColor: 'bg-[#0B1F3A]/10',
+    borderColor: 'border-[#0B1F3A]/20'
+  },
+  {
+    title: 'Storytelling Skills',
+    description: 'Learn to communicate your achievements effectively',
+    icon: MessageSquare,
+    color: 'text-red-700',
+    bgColor: 'bg-red-50',
+    borderColor: 'border-red-200'
+  },
+  {
+    title: 'Cloud & Digital Tech',
+    description: 'Gain expertise in cloud and digital technologies',
+    icon: Cloud,
+    color: 'text-[#0B1F3A]',
+    bgColor: 'bg-[#0B1F3A]/10',
+    borderColor: 'border-[#0B1F3A]/20'
+  },
+  {
+    title: 'Certifications',
+    description: 'Earn AWS, Azure, and industry certifications',
+    icon: Award,
+    color: 'text-red-700',
+    bgColor: 'bg-red-50',
+    borderColor: 'border-red-200'
+  },
+  {
+    title: 'Job Ready Placement',
+    description: 'Direct placement into ready opportunities',
+    icon: Briefcase,
+    color: 'text-[#0B1F3A]',
+    bgColor: 'bg-[#0B1F3A]/10',
+    borderColor: 'border-[#0B1F3A]/20'
   }
 ];
 
@@ -57,11 +60,14 @@ export default function TrainingJourneySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <ScrollReveal direction="up" className="text-center mb-20">
+          <span className="text-sm font-semibold text-red-700 uppercase tracking-wide mb-2 block">
+            TRAINING PROGRAMS
+          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0B1F3A] mb-4">
-            Your Training Journey
+            Comprehensive Support System
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From technical foundations to your first day on the job, we guide you through every step of your career transformation.
+            Our structured training journey takes you from beginner to job-ready professional
           </p>
         </ScrollReveal>
 
@@ -69,7 +75,7 @@ export default function TrainingJourneySection() {
           {/* Horizontal Connecting Line (Desktop) */}
           <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-1 bg-gray-100 -z-10"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {journeySteps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -86,10 +92,6 @@ export default function TrainingJourneySection() {
                        </div>
                     </div>
 
-                    {/* Duration Badge */}
-                    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full mb-3 tracking-wide">
-                      {step.duration}
-                    </span>
 
                     {/* Content */}
                     <h3 className="text-lg font-bold text-[#0B1F3A] mb-2 leading-tight">

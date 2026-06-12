@@ -3,9 +3,13 @@
 import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 
-export default function AboutSection() {
+interface AboutSectionProps {
+  isTopSection?: boolean;
+}
+
+export default function AboutSection({ isTopSection = false }: AboutSectionProps = {}) {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-gray-50">
+    <section id="about" className={`${isTopSection ? 'pt-8 lg:pt-12 pb-20 lg:pb-28' : 'py-20 lg:py-28'} bg-gray-50`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollReveal direction="left">
@@ -15,13 +19,7 @@ export default function AboutSection() {
               </div>
               <div className="absolute -bottom-6 -right-6 lg:-right-8 bg-white rounded-2xl shadow-xl p-6 animate-float-slow">
               </div>
-              <div className="absolute -top-4 -left-4 w-20 h-20 opacity-20">
-                <div className="grid grid-cols-4 gap-1.5">
-                  {Array.from({ length: 16 }).map((_, i) => (
-                    <div key={i} className="w-2 h-2 rounded-full" style={{ backgroundColor: '#1e3a5f' }} />
-                  ))}
-                </div>
-              </div>
+
             </div>
           </ScrollReveal>
 

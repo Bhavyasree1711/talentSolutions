@@ -4,7 +4,11 @@ import { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
 import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  isTopSection?: boolean;
+}
+
+export default function ContactSection({ isTopSection = false }: ContactSectionProps = {}) {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
@@ -17,7 +21,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="contact" className={`${isTopSection ? 'pt-8 lg:pt-12 pb-16 lg:pb-20' : 'py-16 lg:py-20'} bg-gradient-to-b from-white to-gray-50 relative overflow-hidden`}>
       <div className="absolute left-0 bottom-0 w-96 h-96 bg-blue-50 rounded-full -translate-x-1/2 translate-y-1/3 opacity-40 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
