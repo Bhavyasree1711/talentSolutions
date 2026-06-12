@@ -19,6 +19,7 @@ export default function Header() {
     { label: 'HOME', href: '/' },
     { label: 'ABOUT', href: '/about' },
     { label: 'SOLUTIONS', href: '/solutions' },
+    { label: 'PRODUCTS', href: '/products' },
     { label: 'TRAINING', href: '/courses' },
     { label: 'CONTACT', href: '/contact' },
   ];
@@ -40,22 +41,20 @@ export default function Header() {
 />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-red-700 transition-colors tracking-wide uppercase"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          {/* Desktop Navigation & CTA */}
+          <div className="hidden lg:flex items-center gap-8">
+            <div className="flex items-center gap-7">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-red-700 transition-colors tracking-wide uppercase"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
 
-          {/* Right: Search + CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            
             <a
               href="/contact"
               className="px-6 py-2.5 text-white font-bold text-xs rounded-lg transition-all duration-300 hover:shadow-lg tracking-wide uppercase flex items-center gap-1.5 hover:opacity-90"
