@@ -57,28 +57,35 @@ export default function ContractStaffingPage() {
       </div>
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[320px] md:h-[400px] flex items-center overflow-hidden">
-        <Image
-          src="/images/service-executive-search.png"
-          alt="Contract Staffing Solutions"
-          fill
-          priority
-          className="object-cover object-[80%_30%] lg:object-[right_30%]"
-        />
-        {/* Darker Gradient Overlay for Text Visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
+      <section className="bg-[#0B1F3A] text-white py-12 md:py-16 relative overflow-hidden">
+        {/* Glowing decoration blobs */}
+        <div className="absolute top-0 left-0 w-80 h-80 bg-red-500/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white w-full mt-4 lg:mt-6">
-          <div className="max-w-xl">
-            <h1
-              className="text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-              style={{ fontFamily: 'var(--font-outfit)' }}
-            >
-              Contract Staffing Solutions
-            </h1>
-            <p className="text-lg text-gray-200 leading-relaxed">
-              Flexible workforce solutions tailored for project-based requirements. Scale your team without the long-term overhead of permanent headcount.
-            </p>
+        <div className="max-w-6xl mx-auto px-6 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Content Column */}
+            <div className="lg:col-span-7">
+              <h1 
+                className="text-3xl sm:text-4xl lg:text-[2.5rem] font-bold mb-6 leading-tight"
+                style={{ fontFamily: 'var(--font-outfit)' }}
+              >
+                Contract Staffing Solutions
+              </h1>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl">
+                Flexible workforce solutions tailored for project-based requirements. Scale your team without the long-term overhead of permanent headcount.
+              </p>
+            </div>
+            {/* Right Image Column */}
+            <div className="lg:col-span-5 relative w-full h-[220px] sm:h-[300px] lg:h-[260px] xl:h-[300px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 shrink-0">
+              <Image
+                src="/images/service-executive-search.png"
+                alt="Contract Staffing Solutions"
+                fill
+                priority
+                className="object-cover object-center"
+              />
+            </div>
           </div>
         </div>
       </section>
