@@ -42,7 +42,7 @@ export default function TrainDeployPage() {
           alt="Train and Deploy Solutions"
           fill
           priority
-          className="object-cover object-[80%_top] lg:object-right-top"
+          className="object-cover object-[80%_center] lg:object-right"
         />
         {/* Darker Gradient Overlay for Text Visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
