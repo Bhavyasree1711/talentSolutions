@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import PageFAQSection from '@/components/PageFAQSection';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
 import { ArrowLeft, CheckCircle2, Target, BrainCircuit, LineChart } from 'lucide-react';
 
 export default function SkillAssessmentPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-16 md:pt-20">
+      <Header />
       {/* Secondary Nav */}
       <div className="bg-white border-b border-gray-200 py-4 hidden sm:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,27 +162,11 @@ export default function SkillAssessmentPage() {
         ]}
       />
 
-      {/* CTA */}
-      <section className="py-16 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B1F3A] mb-4">
-            Evaluate Top Talent Today
-          </h2>
-          <p className="text-gray-600 mb-8 text-lg">
-            Ensure your next hire has exactly the skills you need. Let's customize an assessment plan for your organization.
-          </p>
+      {/* CTA SECTION */}
+      <CTASection />
 
-          <Link
-            href="/contact"
-            className="px-8 py-3 bg-red-700 text-white rounded-lg font-bold text-sm hover:bg-red-800 transition-all shadow-lg hover:shadow-xl inline-flex items-center gap-2 uppercase tracking-wide group"
-          >
-            Contact Us
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
-        </div>
-      </section>
+      {/* FOOTER */}
+      <Footer />
     </div>
   );
 }

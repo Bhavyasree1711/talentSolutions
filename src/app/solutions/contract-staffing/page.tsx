@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageFAQSection from '@/components/PageFAQSection';
 import { Metadata } from 'next';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
 import { 
   ArrowLeft, 
   Users, 
@@ -27,7 +30,8 @@ export const metadata: Metadata = {
 
 export default function ContractStaffingPage() {
   return (
-    <div className="bg-white min-h-screen font-sans text-gray-900">
+    <div className="bg-white min-h-screen font-sans text-gray-900 pt-16 md:pt-20">
+      <Header />
       {/* Secondary Nav */}
       <div className="bg-white border-b border-gray-200 py-4 hidden sm:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,23 +219,10 @@ export default function ContractStaffingPage() {
       />
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-[#0B1F3A] text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>
-            Ready to Optimize Your Workforce?
-          </h2>
-          <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
-            Let's discuss how our contract staffing and outsourcing solutions can support your project requirements and accelerate your business growth.
-          </p>
+      <CTASection />
 
-          <a
-            href="/contact"
-            className="inline-flex justify-center items-center px-8 py-4 bg-red-600 text-white rounded-lg font-bold hover:bg-red-500 transition-colors shadow-md text-lg"
-          >
-            Schedule a Consultation
-          </a>
-        </div>
-      </section>
+      {/* FOOTER */}
+      <Footer />
     </div>
   );
 }
