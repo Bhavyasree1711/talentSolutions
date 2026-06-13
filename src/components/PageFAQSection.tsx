@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 export interface FAQItem {
   question: string;
@@ -41,31 +40,41 @@ export default function PageFAQSection({
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className={`bg-white border rounded-lg transition-all duration-300 ${
-                openIndex === index ? 'border-red-300 shadow-md' : 'border-gray-200 hover:border-red-200'
+              className={`group border rounded-2xl transition-all duration-300 overflow-hidden ${
+                openIndex === index 
+                  ? 'border-red-600 bg-white shadow-md' 
+                  : 'border-gray-200 bg-white hover:border-gray-300'
               }`}
             >
               <button
-                className="w-full px-6 py-5 flex justify-between items-center focus:outline-none"
+                className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={openIndex === index}
               >
-                <span className="text-left font-semibold text-lg text-[#0B1F3A]">
+                <span className={`text-[15px] font-semibold pr-8 text-left transition-colors duration-300 ${
+                  openIndex === index ? 'text-red-700' : 'text-[#0B1F3A] group-hover:text-red-700'
+                }`}>
                   {faq.question}
                 </span>
-                <span className={`ml-4 flex-shrink-0 transition-transform duration-300 ${
-                  openIndex === index ? 'text-red-700 rotate-180' : 'text-gray-400'
+                
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 ${
+                  openIndex === index 
+                    ? 'bg-red-50 text-red-600' 
+                    : 'bg-gray-50 group-hover:bg-red-50 text-gray-400 group-hover:text-red-600'
                 }`}>
-                  <ChevronDown className="w-6 h-6" />
-                </span>
+                  <svg className="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15" className={`origin-center transition-transform duration-300 ${openIndex === index ? 'rotate-90 scale-y-0' : ''}`} />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
+                  </svg>
+                </div>
               </button>
               
               <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                <div className="px-6 pb-6 text-[14px] text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                   {faq.answer}
                 </div>
               </div>
