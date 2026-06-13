@@ -48,9 +48,9 @@ export default function PermanentStaffingPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-white w-full mt-4 lg:mt-6">
-          <div className="max-w-xl">
+          <div className="max-w-3xl">
             <h1
-              className="text-4xl lg:text-5xl font-bold mb-4 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight"
               style={{ fontFamily: 'var(--font-outfit)' }}
             >
               Permanent Staffing & Build-Operate-Transfer (BoT)
