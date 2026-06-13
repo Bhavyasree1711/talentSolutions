@@ -2,8 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { generateSEOMetadata, generateOrganizationSchema, generateLocalBusinessSchema } from "@/lib/seo";
-import { StickyWhatsAppButton, StickyCallButton } from "@/components/seo/StickyButtons";
 import { QuickEnquiryPopup } from "@/components/seo/QuickEnquiryPopup";
+import SocialSidebar from "@/components/SocialSidebar";
+
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -86,8 +88,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         {children}
-        <StickyWhatsAppButton />
-        <StickyCallButton />
+        <SocialSidebar />
         {/* <QuickEnquiryPopup /> */}
       </body>
     </html>

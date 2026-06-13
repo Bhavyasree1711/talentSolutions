@@ -1,8 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { 
   Globe, 
-  Mail
+  Mail,
+  ChevronRight
 } from 'lucide-react';
 
 const FacebookIcon = ({ className, strokeWidth = 2 }: { className?: string, strokeWidth?: number }) => (
@@ -35,6 +37,7 @@ const WhatsappIcon = ({ className, strokeWidth = 2 }: { className?: string, stro
 );
 
 export default function SocialSidebar() {
+  const [isOpen, setIsOpen] = useState(true);
   const socialLinks = [
     { id: 'linkedin', icon: LinkedinIcon, url: 'https://www.linkedin.com/company/dmxtechservices/posts/?feedView=all', label: 'LinkedIn', colorClass: 'text-[#0077b5] hover:bg-[#0077b5] hover:border-[#0077b5]' },
     { id: 'facebook', icon: FacebookIcon, url: 'https://www.facebook.com/profile.php?id=61573804807368', label: 'Facebook', colorClass: 'text-[#1877f2] hover:bg-[#1877f2] hover:border-[#1877f2]' },
@@ -46,30 +49,44 @@ export default function SocialSidebar() {
 
   return (
     <div 
-      className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden sm:flex flex-col gap-3 bg-slate-100 p-2.5 rounded-l-xl shadow-lg border border-slate-200 border-r-0"
+      className={`fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden sm:flex items-center transition-transform duration-300 ${
+        isOpen ? 'translate-x-0' : 'translate-x-[60px]'
+      }`}
       aria-label="Social Media Links"
     >
-      {socialLinks.map((link) => {
-        const Icon = link.icon;
-        const isExternal = link.url.startsWith('http');
-        
-        return (
-          <a
-            key={link.id}
-            href={link.url}
-            target={isExternal ? '_blank' : '_self'}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
-            aria-label={link.label}
-            title={link.label}
-            className={`w-10 h-10 flex items-center justify-center rounded-lg bg-white shadow-sm border border-slate-200 hover:text-white transition-all duration-300 group ${link.colorClass}`}
-          >
-            <Icon 
-              strokeWidth={2}
-              className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" 
-            />
-          </a>
-        );
-      })}
+      {/* Toggle Tab Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="bg-slate-100 hover:bg-slate-200 text-[#0B1F3A] border border-slate-200 border-r-0 rounded-l-lg p-1.5 shadow-md flex items-center justify-center transition-colors cursor-pointer select-none -translate-x-[0.5px]"
+        aria-label={isOpen ? "Collapse Sidebar" : "Expand Sidebar"}
+      >
+        <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${isOpen ? '' : 'rotate-180'}`} />
+      </button>
+
+      {/* Social Links Container */}
+      <div className="flex flex-col gap-3 bg-slate-100 p-2.5 rounded-l-xl shadow-lg border border-slate-200 border-r-0">
+        {socialLinks.map((link) => {
+          const Icon = link.icon;
+          const isExternal = link.url.startsWith('http');
+          
+          return (
+            <a
+              key={link.id}
+              href={link.url}
+              target={isExternal ? '_blank' : '_self'}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+              aria-label={link.label}
+              title={link.label}
+              className={`w-10 h-10 flex items-center justify-center rounded-lg bg-white shadow-sm border border-slate-200 hover:text-white transition-all duration-300 group ${link.colorClass}`}
+            >
+              <Icon 
+                strokeWidth={2}
+                className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" 
+              />
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }

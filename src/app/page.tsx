@@ -8,7 +8,9 @@ import HomeSolutionsSection from '@/components/HomeSolutionsSection';
 import LeadershipSection from '@/components/LeadershipSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
+import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+
 
 export const metadata: Metadata = {
   title: 'DMX Talent Solutions | Premier HR & IT Training Company',
@@ -44,6 +46,9 @@ export default function Home() {
       
       {/* 9. FAQs */}
       <FAQSection />
+
+      {/* 9b. CTA Section */}
+      <CTASection />
       
       {/* 10. Footer */}
       <Footer />
