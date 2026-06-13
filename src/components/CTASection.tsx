@@ -16,7 +16,7 @@ export default function CTASection() {
   };
 
   return (
-    <section id="cta" className="py-20 lg:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to right, #C53030 0%, #2B5B84 100%)' }}>
+    <section id="cta" className="py-20 lg:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to right, #C53030 0%, #0f1d33 100%)' }}>
       <div className="absolute top-0 left-0 w-64 h-64 bg-red-500/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full animate-spin-slow" />
