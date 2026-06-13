@@ -173,7 +173,7 @@ export default function TalentAcquisitionPage() {
 
       {/* CTA SECTION */}
       <CTASection 
-        title="Ready to Build Your\nDream Team?"
+        title="Ready to Build Your Dream Team?"
         subtitle="Partner with us to streamline your hiring process and secure the exact talent your business requires to succeed."
         buttonText="Get in Touch"
       />

@@ -220,7 +220,7 @@ export default function ContractStaffingPage() {
 
       {/* CTA SECTION */}
       <CTASection 
-        title="Ready to Optimize Your\nWorkforce?"
+        title="Ready to Optimize Your Workforce?"
         subtitle="Let's discuss how our contract staffing and outsourcing solutions can support your project requirements and accelerate your business growth."
         buttonText="Schedule a Consultation"
       />
