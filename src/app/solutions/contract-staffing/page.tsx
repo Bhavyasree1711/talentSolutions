@@ -225,7 +225,7 @@ export default function ContractStaffingPage() {
           </p>
 
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-flex justify-center items-center px-8 py-4 bg-red-600 text-white rounded-lg font-bold hover:bg-red-500 transition-colors shadow-md text-lg"
           >
             Schedule a Consultation

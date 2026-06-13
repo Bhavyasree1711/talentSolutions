@@ -174,7 +174,7 @@ export default function CourseDetailPage({
           </p>
 
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-block mt-6 bg-red-500 px-6 py-3 rounded font-bold hover:bg-red-600"
           >
             Enroll Now
@@ -310,7 +310,7 @@ export default function CourseDetailPage({
               </div>
 
               <Link
-                href="/#contact"
+                href="/contact"
                 className="block text-center mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-bold transition-colors"
               >
                 Request Syllabus

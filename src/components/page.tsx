@@ -114,7 +114,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
               {course.description}
             </p>
             <Link
-              href="/#contact"
+              href="/contact"
               className="px-8 py-4 bg-[#E63946] text-white rounded-lg font-bold text-sm hover:bg-red-800 transition-all shadow-lg hover:shadow-xl inline-block uppercase tracking-wide"
             >
               Enroll Now
@@ -223,7 +223,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
             Join thousands of successful alumni who have transformed their careers through our industry-aligned training programs.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="px-8 py-4 bg-[#E63946] text-white rounded-lg font-bold text-sm hover:bg-red-600 transition-all shadow-lg inline-block uppercase tracking-wide"
           >
             Start Learning Today

@@ -20,13 +20,13 @@ export default function CTASection() {
             hiring process and connect you with exceptional talent.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/#contact" className="px-8 py-4 bg-[#8C1D1D] hover:bg-[#7A1515] text-white font-bold text-sm rounded-lg transition-all duration-300 hover:shadow-xl tracking-wide uppercase inline-flex items-center gap-2 group">
+            <a href="/contact" className="px-8 py-4 bg-[#8C1D1D] hover:bg-[#7A1515] text-white font-bold text-sm rounded-lg transition-all duration-300 hover:shadow-xl tracking-wide uppercase inline-flex items-center gap-2 group">
               GET STARTED
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
             </a>
-            <a href="tel:+916364512292" className="px-8 py-4 bg-white/10 backdrop-blur text-white font-bold text-sm rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 tracking-wide uppercase">
+            <a href="tel:+919247030111" className="px-8 py-4 bg-white/10 backdrop-blur text-white font-bold text-sm rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 tracking-wide uppercase">
               SCHEDULE A CALL
             </a>
           </div>

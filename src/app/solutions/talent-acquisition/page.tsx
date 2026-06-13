@@ -180,7 +180,7 @@ export default function TalentAcquisitionPage() {
           </p>
 
           <Link
-            href="/#contact"
+            href="/contact"
             className="px-8 py-3 bg-red-700 text-white rounded-lg font-bold text-sm hover:bg-red-800 transition-all shadow-lg hover:shadow-xl inline-flex items-center gap-2 uppercase tracking-wide group"
           >
             Get in Touch
