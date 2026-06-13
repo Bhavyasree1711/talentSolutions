@@ -35,14 +35,14 @@ export default function SkillAssessmentPage() {
       </div>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[40vh] max-h-[400px] flex items-center py-20">
+      <section className="relative w-full h-[320px] md:h-[400px] flex items-center overflow-hidden">
         {/* Background Image */}
         <Image
           src="/images/skillassess.png"
           alt="Skill Assessment Services"
           fill
           priority
-          className="object-cover object-[80%_center] lg:object-right"
+          className="object-cover object-[80%_top] lg:object-right-top"
         />
         {/* Darker Gradient Overlay for Text Visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
