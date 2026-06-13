@@ -188,7 +188,11 @@ export default function PermanentStaffingPage() {
       />
 
       {/* CTA SECTION */}
-      <CTASection />
+      <CTASection 
+        title="Ready to Build Your\nCore Team?"
+        subtitle="Let us help you find the permanent talent that will drive your organization forward. Partner with us for a seamless hiring experience."
+        buttonText="Start Hiring Today"
+      />
 
       {/* FOOTER */}
       <Footer />

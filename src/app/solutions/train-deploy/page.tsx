@@ -163,7 +163,11 @@ export default function TrainDeployPage() {
       />
 
       {/* CTA SECTION */}
-      <CTASection />
+      <CTASection 
+        title="Ready to Build Your\nWorkforce?"
+        subtitle="Partner with us to create a reliable pipeline of customized, deployment-ready talent."
+        buttonText="Get Started Today"
+      />
 
       {/* FOOTER */}
       <Footer />

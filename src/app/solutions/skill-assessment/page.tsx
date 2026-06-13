@@ -163,7 +163,11 @@ export default function SkillAssessmentPage() {
       />
 
       {/* CTA SECTION */}
-      <CTASection />
+      <CTASection 
+        title="Evaluate Top Talent\nToday"
+        subtitle="Ensure your next hire has exactly the skills you need. Let's customize an assessment plan for your organization."
+        buttonText="Contact Us"
+      />
 
       {/* FOOTER */}
       <Footer />

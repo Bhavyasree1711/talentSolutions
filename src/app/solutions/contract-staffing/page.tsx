@@ -219,7 +219,11 @@ export default function ContractStaffingPage() {
       />
 
       {/* CTA SECTION */}
-      <CTASection />
+      <CTASection 
+        title="Ready to Optimize Your\nWorkforce?"
+        subtitle="Let's discuss how our contract staffing and outsourcing solutions can support your project requirements and accelerate your business growth."
+        buttonText="Schedule a Consultation"
+      />
 
       {/* FOOTER */}
       <Footer />
