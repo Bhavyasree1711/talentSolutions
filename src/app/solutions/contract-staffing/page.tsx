@@ -63,7 +63,7 @@ export default function ContractStaffingPage() {
           alt="Contract Staffing Solutions"
           fill
           priority
-          className="object-cover object-[80%_center] lg:object-right"
+          className="object-cover object-[80%_30%] lg:object-[right_30%]"
         />
         {/* Darker Gradient Overlay for Text Visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
