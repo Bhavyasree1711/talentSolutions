@@ -3,9 +3,9 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import WeAreDmxSection from '@/components/WeAreDmxSection';
 import CoreValuesSection from '@/components/CoreValuesSection';
-import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 import HomeSolutionsSection from '@/components/HomeSolutionsSection';
 import LeadershipSection from '@/components/LeadershipSection';
+import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
@@ -32,14 +32,14 @@ export default function Home() {
       {/* 3. Core Values */}
       <CoreValuesSection />
       
-      {/* 4. Why Trust Us */}
-      <WhyChooseUsSection />
-
       {/* 5. What We Provide / You Will Achieve (Brief Cards -> /solutions) */}
       <HomeSolutionsSection />
 
       {/* 6. Leadership */}
       <LeadershipSection />
+
+      {/* Why Choose Us */}
+      <WhyChooseUsSection />
 
       {/* 7 & 8. Clients & Testimonials (TestimonialsSection contains both) */}
       <TestimonialsSection /> 

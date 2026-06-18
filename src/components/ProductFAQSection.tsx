@@ -31,7 +31,7 @@ export default function ProductFAQSection({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
-            <MessageCircleQuestion className="w-8 h-8 text-blue-500" />
+            <MessageCircleQuestion className="w-8 h-8 text-red-500" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-[#0B1F3A] mb-4">
             {title}
@@ -47,7 +47,7 @@ export default function ProductFAQSection({
               key={index} 
               className={`group border rounded-2xl transition-all duration-300 overflow-hidden ${
                 openIndex === index 
-                  ? 'border-blue-600 bg-white shadow-md' 
+                  ? 'border-red-600 bg-white shadow-md' 
                   : 'border-gray-200 bg-white hover:border-gray-300'
               }`}
             >
@@ -56,15 +56,15 @@ export default function ProductFAQSection({
                 onClick={() => toggleFAQ(index)}
               >
                 <span className={`text-[15px] font-semibold pr-8 transition-colors duration-300 ${
-                  openIndex === index ? 'text-blue-600' : 'text-gray-900 group-hover:text-blue-600'
+                  openIndex === index ? 'text-red-600' : 'text-gray-900 group-hover:text-red-600'
                 }`}>
                   {faq.question}
                 </span>
                 
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 ${
                   openIndex === index 
-                    ? 'bg-blue-50 text-blue-600' 
-                    : 'bg-gray-50 group-hover:bg-blue-50 text-gray-400 group-hover:text-blue-600'
+                    ? 'bg-red-50 text-red-600' 
+                    : 'bg-gray-50 group-hover:bg-red-50 text-gray-400 group-hover:text-red-600'
                 }`}>
                   <svg className="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15" className={`origin-center transition-transform duration-300 ${openIndex === index ? 'rotate-90 scale-y-0' : ''}`} />

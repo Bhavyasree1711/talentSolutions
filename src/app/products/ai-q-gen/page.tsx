@@ -99,7 +99,7 @@ export default function AIQGenPage() {
                   title: '1. PDF Upload & Extraction',
                   desc: 'Automatically extract questions from PDF documents using advanced AI-powered OCR technology.',
                   icon: UploadCloud,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   bgIcon: 'bg-blue-50',
                   borderColor: 'border-t-red-500'
                 },
@@ -115,7 +115,7 @@ export default function AIQGenPage() {
                   title: '3. Instant Export',
                   desc: 'Download generated questions in various formats ready for immediate use in quizzes, exams, or study guides.',
                   icon: Download,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   bgIcon: 'bg-blue-50',
                   borderColor: 'border-t-red-500'
                 }
@@ -162,7 +162,7 @@ export default function AIQGenPage() {
                   title: 'Business Benefits',
                   desc: 'Reduces educator prep by 80% of manual prep time, eliminates plagiarism pipelines taking hours by generating infinite unique test variants, and scales custom creators.',
                   icon: Zap,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 },
                 {
@@ -176,7 +176,7 @@ export default function AIQGenPage() {
                   title: 'Security & Compliance',
                   desc: 'Strict intellectual property protection. Uploaded content is processed in isolated sandboxes and never used to train public models. Role-based access.',
                   icon: ShieldCheck,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 },
                 {
@@ -190,7 +190,7 @@ export default function AIQGenPage() {
                   title: 'Target Customers',
                   desc: 'Schools, universities, test prep coaching centers, corporate training teams, and EdTech content developers.',
                   icon: GraduationCap,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 }
               ].map((card, i) => (
@@ -226,25 +226,25 @@ export default function AIQGenPage() {
                   title: 'Teachers & Professors',
                   desc: 'Create diverse practice tests for assessments.',
                   img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'Coaching Centers',
                   desc: 'Generate practice questions effortlessly.',
                   img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'Corporate Trainers',
                   desc: 'Develop training materials quickly.',
                   img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'EdTech Platforms',
                   desc: 'Scale content creation with AI.',
                   img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 }
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-[2rem] border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">
@@ -279,25 +279,25 @@ export default function AIQGenPage() {
                   title: 'Smart Variation Strategies',
                   desc: 'Go beyond basic word swaps. AI Q-Gen applies deep cognitive variation techniques - scenario adaptation, context shifting, sentence restructuring, and semantic role swapping - to produce truly unique questions every time.',
                   img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'AI-Powered OCR Extraction',
                   desc: 'Upload any textbook, past paper, or study material in PDF format and let our advanced OCR + NLP pipeline automatically identify, extract, and categorize every question - ready for instant application without typing manual input again.',
                   img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'Plagiarism-Proof Test Variants',
                   desc: 'Instantly generate ten different exam sheets covering the exact same topics with entirely unique questions derived from any single question source. Eradicate cheating among identical exams, while AI cleverly preserves the exact difficulty level and required knowledge.',
                   img: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'One-Click Multi-Format Export',
                   desc: 'Export your generated question banks directly to PDF, Word, QTI, CSV, or JSON formats. Seamlessly upload directly into your LMS (Moodle, Canvas, Blackboard) or print ready-to-use traditional exams with a single click.',
                   img: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 }
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">

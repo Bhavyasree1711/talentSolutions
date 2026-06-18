@@ -207,7 +207,7 @@ export default function CodeOnePage() {
                   title: 'Business Benefits',
                   desc: 'Accelerates developer onboarding, simplifies coding assessment pipelines for recruitment, and reduces infrastructure overhead for student dev environments.',
                   icon: Activity,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 },
                 {
@@ -221,7 +221,7 @@ export default function CodeOnePage() {
                   title: 'Security & Compliance',
                   desc: 'Isolated Docker sandbox runtime environments to prevent code injection, network restriction policies, and encrypted workspace storage.',
                   icon: Lock,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 },
                 {
@@ -235,7 +235,7 @@ export default function CodeOnePage() {
                   title: 'Target Customers',
                   desc: 'Coding bootcamps, academic computer science departments, corporate technical recruitment teams, and engineering departments.',
                   icon: Users,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 }
               ].map((card, i) => (

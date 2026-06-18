@@ -3,8 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  Building2, Video, BrainCircuit, 
+import {
+  Building2, Video, BrainCircuit,
   Languages, ShieldCheck, Code,
   ArrowRight
 } from 'lucide-react';
@@ -64,7 +64,7 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      
+
       <main className="flex-grow pt-32 pb-24">
         {/* HERO SECTION */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
@@ -80,20 +80,20 @@ export default function ProductsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
-              <div 
-                key={product.name} 
+              <div
+                key={product.name}
                 className="bg-white rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.06)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden flex flex-col h-full border border-gray-100"
               >
                 {/* Product Image Cover */}
                 <div className="relative w-full h-48 sm:h-52 bg-gray-100 border-b border-gray-100">
-                  <Image 
-                    src={product.image} 
+                  <Image
+                    src={product.image}
                     alt={product.name}
                     fill
                     className="object-cover"
                   />
                 </div>
-                
+
                 {/* Product Info */}
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
@@ -102,12 +102,12 @@ export default function ProductsPage() {
                     </div>
                     <h2 className="text-lg font-bold text-[#1e3a5f]">{product.name}</h2>
                   </div>
-                  
+
                   <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
                     {product.description}
                   </p>
-                  
-                  <Link 
+
+                  <Link
                     href={product.href}
                     className="inline-flex items-center text-red-500 font-semibold text-sm hover:text-red-700 transition-colors mt-auto"
                   >
@@ -116,6 +116,30 @@ export default function ProductsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* CALL TO ACTION */}
+        <div className="mt-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-[#1e3a5f] rounded-3xl p-10 md:p-14 shadow-2xl relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-500/20 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-red-500/20 blur-3xl"></div>
+
+            <div className="relative z-10">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
+                Ready to transform your business?
+              </h2>
+              <p className="text-blue-100 text-sm md:text-base mb-8 max-w-2xl mx-auto">
+                Contact us today to schedule a demo and learn how our suite of products can help you achieve your goals faster.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 rounded-full bg-red-500 text-white font-semibold hover:bg-red-600 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-300"
+              >
+                Contact Us Now <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </main>

@@ -129,7 +129,7 @@ export default function AIIASPage() {
                   title: 'Smart Questioning',
                   desc: 'Generates interview questions tailored to your resume, skills, and domain.',
                   icon: BrainCircuit,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-l-blue-500'
                 },
                 {
@@ -143,7 +143,7 @@ export default function AIIASPage() {
                   title: 'Instant Feedback',
                   desc: 'Get analysis on your responses, tone, and confidence.',
                   icon: BarChart,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-l-blue-500'
                 },
                 {
@@ -157,7 +157,7 @@ export default function AIIASPage() {
                   title: 'Interactive Interface',
                   desc: 'Select focus areas and track progress.',
                   icon: MessageSquare,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-l-blue-500'
                 }
               ].map((feature, i) => (
@@ -200,7 +200,7 @@ export default function AIIASPage() {
                   title: 'Business Benefits',
                   desc: 'Cuts hiring cycle times by up to 60%, eliminates manual resume filtration bias, and enhances campus placement success rates for academic institutions.',
                   icon: Activity,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'bg-blue-500'
                 },
                 {
@@ -214,7 +214,7 @@ export default function AIIASPage() {
                   title: 'Security & Compliance',
                   desc: 'ISO 27001-aligned security, GDPR-compliant candidate data protection, encrypted video storage, and auditable grading trails.',
                   icon: ShieldCheck,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'bg-blue-500'
                 },
                 {
@@ -228,7 +228,7 @@ export default function AIIASPage() {
                   title: 'Target Customers',
                   desc: 'Corporate recruiting teams, human resource departments, placement cells, career prep schools, and higher education universities.',
                   icon: Target,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'bg-blue-500'
                 }
               ].map((card, i) => (
@@ -266,25 +266,25 @@ export default function AIIASPage() {
                   title: 'Boost Real-Interview Confidence',
                   desc: 'Reduce anxiety and build natural eloquence by practicing in a realistic, pressure-free simulation.',
                   img: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'On-Demand Personalized Practice',
                   desc: 'Access customized interview sessions tailored to your specific field and schedule—anytime, anywhere.',
                   img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'Data-Driven Performance Insights',
                   desc: 'Get precise, instant metrics on your vocabulary, pacing, answer relevance, and body language.',
                   img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-blue-500'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'Structured, Bias-Free Evaluation',
                   desc: 'Ensure a fair and consistent assessment based entirely on merit and structured grading standards.',
                   img: 'https://images.unsplash.com/photo-1554200876-56c2f25224fa?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-[#1e3a5f]'
+                  colorClass: 'text-red-500'
                 }
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-[2rem] border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">

@@ -57,7 +57,6 @@ export default function ProductTestimonialsSection({
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#1e3a5f]">{t.name}</h4>
-                  <p className="text-xs text-gray-500">{t.role}, {t.company}</p>
                 </div>
               </div>
             </div>

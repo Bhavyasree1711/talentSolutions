@@ -417,7 +417,7 @@ export default function CampusNXTPage() {
                   title: 'Business Benefits',
                   desc: 'Reduces operational costs through workflow automation while eliminating manual spreadsheets. Accelerates admissions conversion with digital onboarding, improves student outcomes via consolidated insights, and ensures compliance.',
                   icon: Activity,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'bg-blue-500'
                 },
                 {
@@ -431,7 +431,7 @@ export default function CampusNXTPage() {
                   title: 'Security & Compliance',
                   desc: 'Built for institutional security: role-based access control, full audit logging, encryption at rest and in transit, secure backups, and configurable retention policies to meet GDPR and local data protection requirements.',
                   icon: ShieldCheck,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'bg-blue-500'
                 },
                 {
@@ -445,7 +445,7 @@ export default function CampusNXTPage() {
                   title: 'Target Customers',
                   desc: 'Universities, colleges, vocational institutes, and multi-campus groups seeking a unified, auditable, and extensible ERP to manage academic and administrative operations.',
                   icon: Target,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'bg-blue-500'
                 }
               ].map((card, i) => (
@@ -483,7 +483,7 @@ export default function CampusNXTPage() {
                   title: 'Seamless Payment Gateway Integrations',
                   desc: 'Eliminate transaction friction instantly. CampusNXT comes out-of-the-box with native, secure integrations for leading global and regional payment gateways. Facilitate instant fee settlements, automatic invoice reconciliation, and instant digital receipts for students and parents with maximum reliability.',
                   icon: CreditCard,
-                  color: 'text-blue-600',
+                  color: 'text-red-500',
                   bg: 'bg-blue-50'
                 },
                 {
@@ -497,7 +497,7 @@ export default function CampusNXTPage() {
                   title: '100% Modular & Open Ecosystem',
                   desc: 'Break free from rigid legacy software. CampusNXT is designed with an open platform paradigm. Its fully modular structure ensures you can plug in next-generation products, including our advanced AI Interviewer, modern LMS platforms, library databases, and custom third-party services, effortlessly.',
                   icon: Layers,
-                  color: 'text-blue-600',
+                  color: 'text-red-500',
                   bg: 'bg-blue-50'
                 },
                 {

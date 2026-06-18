@@ -97,7 +97,7 @@ export default function AISmartExamPage() {
                   title: 'Automated Evaluation',
                   desc: 'AI engine matches answers with pre-uploaded keys. Instant scoring: per-question + total marks.',
                   img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-blue-600'
+                  colorClass: 'text-red-500'
                 },
                 {
                   title: 'Smart Results Management',
@@ -109,7 +109,7 @@ export default function AISmartExamPage() {
                   title: 'Multi-Region Leaderboards',
                   desc: 'Compare performance across regions, states, and nationwide. Enable healthy competition & benchmarking.',
                   img: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=400&q=80',
-                  colorClass: 'text-blue-600'
+                  colorClass: 'text-red-500'
                 }
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">
@@ -149,7 +149,7 @@ export default function AISmartExamPage() {
                   title: 'Business Benefits',
                   desc: 'Reduces grading turnaround times by 75%, eliminates human evaluators\' bias, protects exam integrity from academic misconduct, and provides granular school metrics.',
                   icon: BarChart3,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 },
                 {
@@ -163,7 +163,7 @@ export default function AISmartExamPage() {
                   title: 'Security & Compliance',
                   desc: 'GDPR and FERPA compliance, secure lock-down browser integrations, high-security candidate identity verification, and immutable log trails.',
                   icon: Lock,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 },
                 {
@@ -177,7 +177,7 @@ export default function AISmartExamPage() {
                   title: 'Target Customers',
                   desc: 'State education boards, universities, licensing testing bodies, corporate assessment partners, and professional certification providers.',
                   icon: Users,
-                  color: 'text-blue-500',
+                  color: 'text-red-500',
                   borderColor: 'border-blue-500'
                 }
               ].map((card, i) => (
@@ -205,11 +205,11 @@ export default function AISmartExamPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: 'Seamless Integration', icon: UploadCloud, color: 'text-red-500', desc: 'Works with existing OMR systems and question formats' },
-                { name: 'Lightning Fast', icon: Zap, color: 'text-blue-500', desc: 'Process hundreds of answer sheets in minutes, not hours' },
+                { name: 'Lightning Fast', icon: Zap, color: 'text-red-500', desc: 'Process hundreds of answer sheets in minutes, not hours' },
                 { name: 'Advanced Analytics', icon: TrendingUp, color: 'text-red-500', desc: 'Real-time performance tracking and detailed insights' },
-                { name: 'Multi-Region Support', icon: Globe, color: 'text-blue-500', desc: 'Compare and benchmark performance across different regions' },
+                { name: 'Multi-Region Support', icon: Globe, color: 'text-red-500', desc: 'Compare and benchmark performance across different regions' },
                 { name: 'Secure Database', icon: Database, color: 'text-red-500', desc: 'Auto-updated scores with enterprise-grade security' },
-                { name: 'Competitive Insights', icon: Shield, color: 'text-blue-500', desc: 'Enable healthy competition with comprehensive leaderboards' }
+                { name: 'Competitive Insights', icon: Shield, color: 'text-red-500', desc: 'Enable healthy competition with comprehensive leaderboards' }
               ].map((item, i) => (
                 <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow">
                   <div className={`w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center`}>

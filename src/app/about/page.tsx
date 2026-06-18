@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AboutSection from '@/components/AboutSection';
 import MissionVisionSection from '@/components/MissionVisionSection';
-import HomeSolutionsSection from '@/components/HomeSolutionsSection';
 
 import IndustriesServedSection from '@/components/IndustriesServedSection';
 import StatsSection from '@/components/StatsSection';
@@ -19,25 +18,21 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white pt-20">
       <Header />
-      
+
       <AboutSection isTopSection={true} />
 
       {/* 3. Mission & Vision */}
       <MissionVisionSection />
 
-      {/* 4. Services (Overview linking to /solutions) */}
-      <HomeSolutionsSection />
-
+      {/* 7. Stats Counter */}
+      <StatsSection />
 
       {/* 6. Industries Served */}
       <IndustriesServedSection />
 
-      {/* 7. Stats Counter */}
-      <StatsSection />
-
       {/* 8. CTA Section */}
       <CTASection />
-      
+
       <Footer />
     </div>
   );
